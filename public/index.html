@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <style>.countdown{text-align:center}.countdown strong{display:block;font:900 clamp(72px,18vw,130px) "Big Shoulders Display";line-height:1;color:var(--amber)}</style>
+  <style>.countdown{text-align:center}.countdown strong{display:block;font:900 clamp(72px,18vw,130px) "Big Shoulders Display";line-height:1;color:var(--amber)}.host-stage{overflow:hidden;position:relative}.host-stage h2{font-size:clamp(38px,7vw,64px);margin:10px 0 2px}.host-stage .record.playing{animation:host-spin 2.5s linear infinite;box-shadow:0 0 45px #efa94335,0 15px 30px #0008}.response-track{height:12px;background:var(--panel2);border:1px solid var(--line);border-radius:99px;overflow:hidden;max-width:520px;margin:18px auto 8px}.response-fill{height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--teal));transition:width .25s ease}.host-count{font:600 13px "IBM Plex Mono";color:var(--dim)}.points-earned{color:var(--teal);font:600 12px "IBM Plex Mono";margin-left:8px}.round-results{list-style:none;padding:0;margin:24px auto;max-width:560px}.round-results li{display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid var(--line);text-align:left}.round-results .result-icon{font-size:22px}.round-results .result-name{flex:1;font-weight:700}.round-results .right{color:var(--teal)}.round-results .wrong{color:var(--red)}.next-countdown{font:600 12px "IBM Plex Mono";color:var(--amber);letter-spacing:.08em;text-transform:uppercase}@keyframes host-spin{to{transform:rotate(360deg)}}</style>
 </head>
 <body>
   <main class="app">
@@ -36,10 +36,10 @@
 
     <section id="game" class="screen">
       <div class="game-head"><span id="round-label"></span><strong id="timer"></strong><span id="decade-label" class="chip"></span></div>
-      <div id="host-stage" class="panel host-stage" hidden><div class="record"><span>♪</span></div><button id="play-clip" class="primary">▶ Play now</button><div id="yt-player"></div><p class="muted">The clip starts automatically after the countdown and stops when time expires.</p></div>
+      <div id="host-stage" class="panel host-stage" hidden><p class="eyebrow">Listen closely</p><h2>Name that tune!</h2><div class="record" id="host-record"><span>♪</span></div><div class="response-track"><div id="response-fill" class="response-fill"></div></div><div id="host-response-count" class="host-count">Waiting for answers…</div><button id="play-clip" class="primary">▶ Play now</button> <button id="reveal" class="primary">Reveal early</button><div id="yt-player"></div><p class="muted">The clip starts automatically and stops when time expires.</p></div>
       <div id="countdown-panel" class="panel countdown" hidden><p class="eyebrow">Get ready</p><strong id="countdown-number">3</strong></div>
-      <div id="question" class="panel"><p class="eyebrow">What song is this?</p><div id="choices" class="choices"></div><p id="answer-status" class="status"></p><button id="reveal" class="primary" hidden>Reveal answer</button></div>
-      <div id="reveal-panel" class="panel reveal" hidden><p class="eyebrow">The answer</p><h2 id="answer-title"></h2><p id="answer-artist"></p><button id="next-round" class="primary" hidden>Next round</button></div>
+      <div id="question" class="panel"><p class="eyebrow">What song is this?</p><div id="choices" class="choices"></div><p id="answer-status" class="status"></p></div>
+      <div id="reveal-panel" class="panel reveal" hidden><p class="eyebrow">The answer</p><h2 id="answer-title"></h2><p id="answer-artist"></p><ul id="round-results" class="round-results"></ul><div id="next-countdown" class="next-countdown"></div></div>
       <aside class="panel leaderboard"><p class="eyebrow">Leaderboard</p><ol id="leaderboard"></ol></aside>
     </section>
 

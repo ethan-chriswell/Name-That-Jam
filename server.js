@@ -46,12 +46,14 @@ function publicState(room, viewerId) {
     totalRounds: room.settings.rounds,
     decade: song?.decade || null,
     videoId: viewerId === room.hostId ? song?.videoId || null : null,
-    choices: song?.choices || [],
+    choices: viewerId === room.hostId ? [] : song?.choices || [],
     answer: reveal && song ? { title: song.title, artist: song.artist } : null,
     answered: Boolean(viewer?.answer),
-    deadline: room.phase === "question" || room.phase === "countdown" ? room.deadline : null,
+    deadline: ["question", "countdown", "reveal"].includes(room.phase) ? room.deadline : null,
     players: [...room.players.values()].map(({ id, name, score, answer }) => ({
-      id, name, score, answered: Boolean(answer)
+      id, name, score, answered: Boolean(answer),
+      roundPoints: reveal ? answer?.points || 0 : null,
+      roundCorrect: reveal ? Boolean(answer?.correct) : null
     })).sort((a, b) => b.score - a.score || a.name.localeCompare(b.name)),
     settings: room.settings
   };
@@ -68,13 +70,28 @@ function revealRound(room) {
   if (room.phase !== "question") return;
   room.players.forEach(player => {
     if (player.answer?.correct && !player.answer.scored) {
-      player.score += 100;
+      player.score += player.answer.points;
       player.answer.scored = true;
     }
   });
   room.phase = "reveal";
-  room.deadline = null;
+  room.deadline = Date.now() + 6000;
+  room.timer = setTimeout(() => advanceRound(room), 6000);
   broadcast(room);
+}
+
+function advanceRound(room) {
+  clearTimeout(room.timer);
+  if (room.phase !== "reveal") return;
+  if (room.round + 1 >= room.queue.length) {
+    room.phase = "finished";
+    room.deadline = null;
+    broadcast(room);
+    return;
+  }
+  room.round += 1;
+  room.players.forEach(player => { player.answer = null; });
+  beginCountdown(room);
 }
 
 function beginQuestion(room) {
@@ -158,7 +175,10 @@ io.on("connection", socket => {
     const answer = String(value);
     if (!song.choices.includes(answer)) return;
     const correct = answer === `${song.title} — ${song.artist}`;
-    player.answer = { value: answer, correct };
+    const millisecondsLeft = Math.max(0, room.deadline - Date.now());
+    const speedRatio = Math.min(1, millisecondsLeft / (room.settings.seconds * 1000));
+    const points = correct ? Math.round(500 + 500 * speedRatio) : 0;
+    player.answer = { value: answer, correct, points, submittedAt: Date.now(), scored: false };
     broadcast(room);
   });
 
@@ -171,13 +191,7 @@ io.on("connection", socket => {
   socket.on("next-round", () => {
     const room = rooms.get(socket.data.roomCode);
     if (!room || room.hostId !== socket.id || room.phase !== "reveal") return;
-    if (room.round + 1 >= room.queue.length) room.phase = "finished";
-    else {
-      room.round += 1;
-      room.players.forEach(player => { player.answer = null; });
-      beginCountdown(room);
-    }
-    broadcast(room);
+    advanceRound(room);
   });
 
   socket.on("disconnect", () => {
