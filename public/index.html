@@ -25,7 +25,7 @@
 
     <section id="setup" class="screen">
       <div class="panel"><p class="eyebrow">Host setup</p><h2>Build your playlist</h2><div id="decades" class="decades"></div>
-        <div class="settings"><label>Rounds<select id="rounds"><option>5</option><option selected>10</option><option>15</option></select></label><label>Time per round<select id="seconds"><option value="30">Easy · 30s</option><option value="20" selected>Normal · 20s</option><option value="10">Hard · 10s</option></select></label></div>
+        <div class="settings"><label>Rounds<select id="rounds"><option>5</option><option selected>10</option><option>15</option></select></label><label>Difficulty<select id="difficulty"><option value="easy">Easy · hits · 30s</option><option value="normal" selected>Normal · mixed · 20s</option><option value="hard">Hard · deep cuts · 10s</option></select></label><label>Answer style<select id="answer-mode"><option value="mc">Multiple choice</option><option value="type">Type song or artist</option><option value="year">Guess year + artist bonus</option></select></label></div>
         <button id="create-room" class="primary">Create room</button>
       </div>
     </section>
@@ -38,8 +38,9 @@
       <div class="game-head"><span id="round-label"></span><strong id="timer"></strong><span id="decade-label" class="chip"></span></div>
       <div id="host-stage" class="panel host-stage" hidden><p class="eyebrow">Listen closely</p><h2>Name that tune!</h2><div class="record" id="host-record"><span>♪</span></div><div class="response-track"><div id="response-fill" class="response-fill"></div></div><div id="host-response-count" class="host-count">Waiting for answers…</div><button id="play-clip" class="primary">▶ Play now</button> <button id="reveal" class="primary">Reveal early</button><div id="yt-player"></div><p class="muted">The clip starts automatically and stops when time expires.</p></div>
       <div id="countdown-panel" class="panel countdown" hidden><p class="eyebrow">Get ready</p><strong id="countdown-number">3</strong></div>
-      <div id="question" class="panel"><p class="eyebrow">What song is this?</p><div id="choices" class="choices"></div><p id="answer-status" class="status"></p></div>
-      <div id="reveal-panel" class="panel reveal" hidden><p class="eyebrow">The answer</p><h2 id="answer-title"></h2><p id="answer-artist"></p><ul id="round-results" class="round-results"></ul><div id="next-countdown" class="next-countdown"></div></div>
+      <div id="loading-panel" class="panel countdown" hidden><p class="eyebrow">Stand by</p><h2>Waiting for the music…</h2><p>The timer begins when the host’s song starts.</p></div>
+      <div id="question" class="panel"><p class="eyebrow" id="question-prompt">What song is this?</p><div id="choices" class="choices"></div><form id="typed-answer-form" hidden><input id="typed-answer" maxlength="100" autocomplete="off" placeholder="Type the song title or artist…"><button class="secondary">Lock in answer</button></form><form id="year-answer-form" hidden><input id="year-answer" type="number" min="1900" max="2100" inputmode="numeric" placeholder="Release year" required><input id="artist-bonus" maxlength="100" autocomplete="off" placeholder="Artist name (optional bonus)"><button class="secondary">Lock in answer</button></form><p id="answer-status" class="status"></p></div>
+      <div id="reveal-panel" class="panel reveal" hidden><p class="eyebrow">The answer</p><h2 id="answer-title"></h2><p id="answer-artist"></p><p id="answer-year"></p><ul id="round-results" class="round-results"></ul><div id="next-countdown" class="next-countdown"></div></div>
       <aside class="panel leaderboard"><p class="eyebrow">Leaderboard</p><ol id="leaderboard"></ol></aside>
     </section>
 

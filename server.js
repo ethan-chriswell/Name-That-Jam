@@ -34,6 +34,39 @@ function cleanName(value) {
   return String(value || "Player").trim().replace(/\s+/g, " ").slice(0, 24) || "Player";
 }
 
+function normalizeAnswer(value) {
+  return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ").replace(/[^a-z0-9 ]/g, " ").replace(/\b(the|a|an)\b/g, " ")
+    .replace(/\s+/g, " ").trim();
+}
+
+function editDistance(a, b) {
+  const previous = Array.from({ length: b.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= a.length; i++) {
+    let diagonal = previous[0];
+    previous[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      const above = previous[j];
+      previous[j] = Math.min(previous[j] + 1, previous[j - 1] + 1,
+        diagonal + (a[i - 1] === b[j - 1] ? 0 : 1));
+      diagonal = above;
+    }
+  }
+  return previous[b.length];
+}
+
+function textMatches(value, candidate) {
+  const guess = normalizeAnswer(value);
+  if (guess.length < 2) return false;
+  const expected = normalizeAnswer(candidate);
+  const tolerance = expected.length >= 12 ? 2 : expected.length >= 6 ? 1 : 0;
+  return guess === expected || editDistance(guess, expected) <= tolerance;
+}
+
+function typedAnswerMatches(value, song) {
+  return [song.title, song.artist].some(candidate => textMatches(value, candidate));
+}
+
 function publicState(room, viewerId) {
   const song = room.queue[room.round] || null;
   const viewer = room.players.get(viewerId);
@@ -43,17 +76,18 @@ function publicState(room, viewerId) {
     phase: room.phase,
     isHost: viewerId === room.hostId,
     round: room.round + 1,
-    totalRounds: room.settings.rounds,
+    totalRounds: room.queue.length || room.settings.rounds,
     decade: song?.decade || null,
     videoId: viewerId === room.hostId ? song?.videoId || null : null,
-    choices: viewerId === room.hostId ? [] : song?.choices || [],
-    answer: reveal && song ? { title: song.title, artist: song.artist } : null,
+    choices: viewerId === room.hostId || room.settings.mode !== "mc" ? [] : song?.choices || [],
+    answer: reveal && song ? { title: song.title, artist: song.artist, releaseYear: song.releaseYear } : null,
     answered: Boolean(viewer?.answer),
     deadline: ["question", "countdown", "reveal"].includes(room.phase) ? room.deadline : null,
     players: [...room.players.values()].map(({ id, name, score, answer }) => ({
       id, name, score, answered: Boolean(answer),
       roundPoints: reveal ? answer?.points || 0 : null,
-      roundCorrect: reveal ? Boolean(answer?.correct) : null
+      roundCorrect: reveal ? Boolean(answer?.correct) : null,
+      roundArtistBonus: reveal ? Boolean(answer?.artistBonus) : null
     })).sort((a, b) => b.score - a.score || a.name.localeCompare(b.name)),
     settings: room.settings
   };
@@ -69,7 +103,7 @@ function revealRound(room) {
   clearTimeout(room.timer);
   if (room.phase !== "question") return;
   room.players.forEach(player => {
-    if (player.answer?.correct && !player.answer.scored) {
+    if (player.answer?.points > 0 && !player.answer.scored) {
       player.score += player.answer.points;
       player.answer.scored = true;
     }
@@ -95,6 +129,7 @@ function advanceRound(room) {
 }
 
 function beginQuestion(room) {
+  if (room.phase !== "loading") return;
   room.phase = "question";
   room.deadline = Date.now() + room.settings.seconds * 1000;
   room.timer = setTimeout(() => {
@@ -103,17 +138,31 @@ function beginQuestion(room) {
   broadcast(room);
 }
 
+function beginLoading(room) {
+  room.phase = "loading";
+  room.deadline = null;
+  broadcast(room);
+}
+
 function beginCountdown(room) {
   clearTimeout(room.timer);
   room.phase = "countdown";
   room.deadline = Date.now() + 3000;
-  room.timer = setTimeout(() => beginQuestion(room), 3000);
+  room.timer = setTimeout(() => beginLoading(room), 3000);
   broadcast(room);
 }
 
 function makeQueue(settings) {
-  const pool = getSongsByDecades(settings.decades);
-  return shuffle(pool).slice(0, Math.min(settings.rounds, pool.length)).map(song => {
+  const pool = getSongsByDecades(settings.decades)
+    .filter(song => settings.mode !== "year" || Number.isInteger(song.releaseYear));
+  const target = Math.min(settings.rounds, pool.length);
+  const popular = shuffle(pool.filter(song => song.popularity === "popular"));
+  const deep = shuffle(pool.filter(song => song.popularity === "deep"));
+  const deepRatio = { easy: 0, normal: 0.3, hard: 0.7 }[settings.difficulty];
+  const deepCount = Math.min(deep.length, Math.round(target * deepRatio));
+  let selected = deep.slice(0, deepCount).concat(popular.slice(0, target - deepCount));
+  if (selected.length < target) selected = selected.concat(deep.slice(deepCount, deepCount + target - selected.length));
+  return shuffle(selected).map(song => {
     const distractors = shuffle(pool.filter(other => other.title !== song.title)).slice(0, 3);
     return { ...song, choices: shuffle([song, ...distractors]).map(item => `${item.title} — ${item.artist}`) };
   });
@@ -132,10 +181,13 @@ app.get("/api/rooms/:code/qr", async (req, res) => {
 io.on("connection", socket => {
   socket.on("create-room", (raw, reply = () => {}) => {
     const decades = Array.isArray(raw?.decades) ? raw.decades.filter(d => DECADES.includes(d)) : [];
+    const difficulty = ["easy", "normal", "hard"].includes(raw?.difficulty) ? raw.difficulty : "normal";
     const settings = {
       decades: decades.length ? decades : DECADES,
       rounds: [5, 10, 15].includes(Number(raw?.rounds)) ? Number(raw.rounds) : 10,
-      seconds: [10, 20, 30].includes(Number(raw?.seconds)) ? Number(raw.seconds) : 20
+      seconds: { easy: 30, normal: 20, hard: 10 }[difficulty],
+      difficulty,
+      mode: ["type", "year"].includes(raw?.mode) ? raw.mode : "mc"
     };
     const roomCode = code();
     const room = { code: roomCode, hostId: socket.id, phase: "lobby", round: 0, settings,
@@ -172,14 +224,34 @@ io.on("connection", socket => {
     const player = room?.players.get(socket.id);
     const song = room?.queue[room.round];
     if (!room || !player || !song || room.phase !== "question" || player.answer) return;
-    const answer = String(value);
-    if (!song.choices.includes(answer)) return;
-    const correct = answer === `${song.title} — ${song.artist}`;
     const millisecondsLeft = Math.max(0, room.deadline - Date.now());
     const speedRatio = Math.min(1, millisecondsLeft / (room.settings.seconds * 1000));
-    const points = correct ? Math.round(500 + 500 * speedRatio) : 0;
-    player.answer = { value: answer, correct, points, submittedAt: Date.now(), scored: false };
+    let answer, correct, artistBonus = false;
+    if (room.settings.mode === "year") {
+      const year = Number(value?.year);
+      const artist = String(value?.artist || "").trim();
+      if (!Number.isInteger(year) || year < 1900 || year > 2100 || artist.length > 100) return;
+      answer = { year, artist };
+      correct = year === song.releaseYear;
+      artistBonus = Boolean(artist) && textMatches(artist, song.artist);
+    } else {
+      answer = String(value);
+      if (room.settings.mode === "mc" && !song.choices.includes(answer)) return;
+      if (room.settings.mode === "type" && (!answer.trim() || answer.length > 100)) return;
+      correct = room.settings.mode === "type"
+        ? typedAnswerMatches(answer, song)
+        : answer === `${song.title} — ${song.artist}`;
+    }
+    const points = (correct ? Math.round(500 + 500 * speedRatio) : 0) + (artistBonus ? 250 : 0);
+    player.answer = { value: answer, correct, artistBonus, points, submittedAt: Date.now(), scored: false };
     broadcast(room);
+  });
+
+  socket.on("playback-started", rawRound => {
+    const room = rooms.get(socket.data.roomCode);
+    if (!room || room.hostId !== socket.id || room.phase !== "loading") return;
+    if (Number(rawRound) !== room.round + 1) return;
+    beginQuestion(room);
   });
 
   socket.on("reveal", () => {

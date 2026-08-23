@@ -40,6 +40,12 @@ The Node server uses Socket.IO to keep the host and player phones synchronized. 
 
 The song catalog lives in SQLite at `data/songs.db`. To edit it reproducibly, update `data/songs.json` and run `npm run db:build`. Set `SONG_DATABASE` to use a different database file at runtime.
 
+Release-year mode uses only catalog entries with a verified `release_year`. Run `npm run db:enrich-years` to query MusicBrainz for missing first-release years, review the resulting JSON changes, then run `npm run db:build`.
+
+Each catalog entry may use `"deep"` as its fifth JSON value; entries without it default to `"popular"`. Easy games use popular tracks, Normal games target a 30% deep-cut mix, and Hard games target 70% deep cuts. Difficulty also sets the round timer to 30, 20, or 10 seconds respectively.
+
+Large curated batches can be staged in `data/song-additions.json` and imported with `npm run db:import-additions`. The importer resolves YouTube IDs, rejects duplicates, checkpoints each track, and is safe to resume.
+
 For phones to join, they must be able to reach the address shown in the browser. On a home network, open the game on the host using the computer's LAN IP (for example `http://192.168.1.20:8080`), not `localhost`. For internet play, deploy behind HTTPS with a public hostname. Run a single container replica unless room storage is moved to Redis.
 
 ## CI/CD

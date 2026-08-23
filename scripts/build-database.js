@@ -12,12 +12,15 @@ const database = new Database(databasePath);
 
 database.pragma("journal_mode = WAL");
 database.exec(`
-  CREATE TABLE IF NOT EXISTS songs (
+  DROP TABLE IF EXISTS songs;
+  CREATE TABLE songs (
     id INTEGER PRIMARY KEY,
     decade TEXT NOT NULL,
     title TEXT NOT NULL,
     artist TEXT NOT NULL,
     youtube_video_id TEXT NOT NULL,
+    release_year INTEGER CHECK(release_year BETWEEN 1900 AND 2100),
+    popularity TEXT NOT NULL CHECK(popularity IN ('popular', 'deep')),
     UNIQUE(decade, title, artist)
   );
   CREATE INDEX IF NOT EXISTS idx_songs_decade ON songs(decade);
@@ -26,16 +29,21 @@ database.exec(`
 const replaceCatalog = database.transaction(() => {
   database.prepare("DELETE FROM songs").run();
   const insert = database.prepare(`
-    INSERT INTO songs (decade, title, artist, youtube_video_id)
-    VALUES (@decade, @title, @artist, @videoId)
+    INSERT INTO songs (decade, title, artist, youtube_video_id, release_year, popularity)
+    VALUES (@decade, @title, @artist, @videoId, @releaseYear, @popularity)
   `);
   for (const [decade, entries] of Object.entries(songs)) {
-    for (const [title, artist, videoId] of entries) insert.run({ decade, title, artist, videoId });
+    for (const [title, artist, videoId, releaseYear, popularity = "popular"] of entries) {
+      insert.run({ decade, title, artist, videoId,
+        releaseYear: Number.isInteger(releaseYear) ? releaseYear : null,
+        popularity });
+    }
   }
 });
 
 replaceCatalog();
 database.pragma("wal_checkpoint(TRUNCATE)");
 const count = database.prepare("SELECT COUNT(*) AS count FROM songs").get().count;
+const yearCount = database.prepare("SELECT COUNT(release_year) AS count FROM songs").get().count;
 database.close();
-console.log(`Built ${databasePath} with ${count} songs.`);
+console.log(`Built ${databasePath} with ${count} songs (${yearCount} with verified release years).`);

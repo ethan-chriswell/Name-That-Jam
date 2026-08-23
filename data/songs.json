@@ -3,7 +3,8 @@
     [
       "Rock Around the Clock",
       "Bill Haley & His Comets",
-      "npa30HRZmRw"
+      "npa30HRZmRw",
+      1949
     ],
     [
       "Hound Dog",
@@ -13,7 +14,8 @@
     [
       "Johnny B. Goode",
       "Chuck Berry",
-      "aKCt8ssC7cs"
+      "aKCt8ssC7cs",
+      1958
     ],
     [
       "That'll Be the Day",
@@ -28,17 +30,20 @@
     [
       "Tutti Frutti",
       "Little Richard",
-      "qo8WRHBgoaQ"
+      "qo8WRHBgoaQ",
+      1960
     ],
     [
       "Mack the Knife",
       "Bobby Darin",
-      "LW4kbz-y4PU"
+      "LW4kbz-y4PU",
+      1959
     ],
     [
       "Peggy Sue",
       "Buddy Holly",
-      "OUesbTObC9A"
+      "OUesbTObC9A",
+      1958
     ],
     [
       "Blue Suede Shoes",
@@ -53,7 +58,8 @@
     [
       "La Bamba",
       "Ritchie Valens",
-      "4OYkTv6mUg4"
+      "4OYkTv6mUg4",
+      1960
     ],
     [
       "Roll Over Beethoven",
@@ -63,12 +69,14 @@
     [
       "Sh-Boom",
       "The Chords",
-      "TFcixQ6HuCw"
+      "TFcixQ6HuCw",
+      1954
     ],
     [
       "Earth Angel",
       "The Penguins",
-      "VJcGi4-n_Yw"
+      "VJcGi4-n_Yw",
+      1954
     ],
     [
       "At the Hop",
@@ -78,22 +86,26 @@
     [
       "Jailhouse Rock",
       "Elvis Presley",
-      "PpsUOOfb-vE"
+      "PpsUOOfb-vE",
+      1957
     ],
     [
       "Kansas City",
       "Wilbert Harrison",
-      "1VtyOUy1m6k"
+      "1VtyOUy1m6k",
+      1959
     ],
     [
       "Why Do Fools Fall in Love",
       "Frankie Lymon & The Teenagers",
-      "2sAHiR0rkJg"
+      "2sAHiR0rkJg",
+      1956
     ],
     [
       "Sixteen Tons",
       "Tennessee Ernie Ford",
-      "6JekylR-Zds"
+      "6JekylR-Zds",
+      1956
     ],
     [
       "Unchained Melody",
@@ -103,12 +115,14 @@
     [
       "The Great Pretender",
       "The Platters",
-      "xCfxMHLsoBU"
+      "xCfxMHLsoBU",
+      1956
     ],
     [
       "Rock and Roll Music",
       "Chuck Berry",
-      "6ejNqUfRx5U"
+      "6ejNqUfRx5U",
+      1957
     ],
     [
       "All I Have to Do Is Dream",
@@ -138,7 +152,8 @@
     [
       "Rock and Roll Is Here to Stay",
       "Danny & the Juniors",
-      "Yf503ChwxW8"
+      "Yf503ChwxW8",
+      1957
     ],
     [
       "Come Go With Me",
@@ -168,7 +183,8 @@
     [
       "See You Later, Alligator",
       "Bill Haley & His Comets",
-      "fW928UleVRY"
+      "fW928UleVRY",
+      1956
     ],
     [
       "Twenty Flight Rock",
@@ -223,7 +239,8 @@
     [
       "Put Your Head on My Shoulder",
       "Paul Anka",
-      "H1DDqrtG7dA"
+      "H1DDqrtG7dA",
+      1959
     ],
     [
       "Lonely Boy",
@@ -249,6 +266,216 @@
       "Since I Don't Have You",
       "The Skyliners",
       "5mu7c6m6Gbw"
+    ],
+    [
+      "Rumble",
+      "Link Wray & His Ray Men",
+      "ucTg6rZJCu4",
+      1958,
+      "deep"
+    ],
+    [
+      "Susie Q",
+      "Dale Hawkins",
+      "oIJIvfR1mjU",
+      1957,
+      "deep"
+    ],
+    [
+      "Be-Bop-A-Lula",
+      "Gene Vincent",
+      "vDU9FP5_B2M",
+      1956,
+      "deep"
+    ],
+    [
+      "Rave On",
+      "Buddy Holly",
+      "0IUV-QxwlRM",
+      1958,
+      "deep"
+    ],
+    [
+      "Shake, Rattle and Roll",
+      "Big Joe Turner",
+      "YhELpSeeipg",
+      1954,
+      "deep"
+    ],
+    [
+      "Blueberry Hill",
+      "Fats Domino",
+      "uZXiNgwcqaY",
+      1956,
+      "popular"
+    ],
+    [
+      "Long Tall Sally",
+      "Little Richard",
+      "E68N5E1d0_M",
+      1956,
+      "popular"
+    ],
+    [
+      "Ain't That a Shame",
+      "Fats Domino",
+      "I6JZW7zMDfY",
+      1955,
+      "popular"
+    ],
+    [
+      "Maybellene",
+      "Chuck Berry",
+      "RMkIK0qZnjw",
+      1955,
+      "popular"
+    ],
+    [
+      "Bye Bye Love",
+      "The Everly Brothers",
+      "OTkuNm_ZxU0",
+      1957,
+      "popular"
+    ],
+    [
+      "Tequila",
+      "The Champs",
+      "U_JFLb1IItM",
+      1958,
+      "popular"
+    ],
+    [
+      "The Book of Love",
+      "The Monotones",
+      "9Z_rzScV3TM",
+      1958,
+      "popular"
+    ],
+    [
+      "Little Darlin'",
+      "The Diamonds",
+      "WKa0XNV6bn4",
+      1957,
+      "popular"
+    ],
+    [
+      "Smoke Gets in Your Eyes",
+      "The Platters",
+      "vfBboBz3yoc",
+      1958,
+      "popular"
+    ],
+    [
+      "Love Potion No. 9",
+      "The Clovers",
+      "h8KDknyNzsw",
+      1959,
+      "popular"
+    ],
+    [
+      "A White Sport Coat",
+      "Marty Robbins",
+      "EDAYCOH2fwE",
+      1957,
+      "deep"
+    ],
+    [
+      "It's All in the Game",
+      "Tommy Edwards",
+      "ubsb25Ckkbg",
+      1958,
+      "deep"
+    ],
+    [
+      "Donna",
+      "Ritchie Valens",
+      "0iJCAcKIwdI",
+      1958,
+      "deep"
+    ],
+    [
+      "Maybe",
+      "The Chantels",
+      "2kpnx6sl678",
+      1957,
+      "deep"
+    ],
+    [
+      "Tears on My Pillow",
+      "Little Anthony and the Imperials",
+      "x33hBl5HIi0",
+      1958,
+      "deep"
+    ],
+    [
+      "Shout",
+      "The Isley Brothers",
+      "DPVf01jXL7M",
+      1959,
+      "deep"
+    ],
+    [
+      "C'mon Everybody",
+      "Eddie Cochran",
+      "AsmAD3nndh0",
+      1958,
+      "deep"
+    ],
+    [
+      "Queen of the Hop",
+      "Bobby Darin",
+      "AIecFM01Tkc",
+      1958,
+      "deep"
+    ],
+    [
+      "Sea Cruise",
+      "Frankie Ford",
+      "b__fI0xeTyI",
+      1959,
+      "deep"
+    ],
+    [
+      "Dream Lover",
+      "Bobby Darin",
+      "iAEZ9KtkAaI",
+      1959,
+      "deep"
+    ],
+    [
+      "What'd I Say",
+      "Ray Charles",
+      "6uTDa3771HM",
+      1959,
+      "deep"
+    ],
+    [
+      "There Goes My Baby",
+      "The Drifters",
+      "xU21gzEtmuw",
+      1959,
+      "deep"
+    ],
+    [
+      "Poison Ivy",
+      "The Coasters",
+      "lbrtRlAtNys",
+      1959,
+      "deep"
+    ],
+    [
+      "The Battle of New Orleans",
+      "Johnny Horton",
+      "__uFnEMJqjg",
+      1959,
+      "deep"
+    ],
+    [
+      "Smokestack Lightning",
+      "Howlin' Wolf",
+      "VMUt8KdDtTY",
+      1956,
+      "deep"
     ]
   ],
   "1960s": [
@@ -290,7 +517,8 @@
     [
       "(Sittin' On) The Dock of the Bay",
       "Otis Redding",
-      "XWhAgV8Z3a4"
+      "XWhAgV8Z3a4",
+      1964
     ],
     [
       "Light My Fire",
@@ -320,7 +548,8 @@
     [
       "I Heard It Through the Grapevine",
       "Marvin Gaye",
-      "_3A8ICytYEg"
+      "_3A8ICytYEg",
+      1968
     ],
     [
       "Brown Eyed Girl",
@@ -400,7 +629,8 @@
     [
       "You've Lost That Lovin' Feelin'",
       "The Righteous Brothers",
-      "oquo1ydgrUg"
+      "oquo1ydgrUg",
+      1965
     ],
     [
       "Reach Out I'll Be There",
@@ -415,7 +645,8 @@
     [
       "Purple Haze",
       "The Jimi Hendrix Experience",
-      "WGoDaYjdfSg"
+      "WGoDaYjdfSg",
+      1967
     ],
     [
       "96 Tears",
@@ -430,12 +661,14 @@
     [
       "These Boots Are Made for Walkin'",
       "Nancy Sinatra",
-      "GM1kzbAgo_E"
+      "GM1kzbAgo_E",
+      1966
     ],
     [
       "Where Did Our Love Go",
       "The Supremes",
-      "Jt_31gR18NA"
+      "Jt_31gR18NA",
+      1964
     ],
     [
       "Sugar, Sugar",
@@ -445,7 +678,8 @@
     [
       "Louie Louie",
       "The Kingsmen",
-      "1RZJ4ESU52U"
+      "1RZJ4ESU52U",
+      1963
     ],
     [
       "Runaway",
@@ -495,12 +729,223 @@
     [
       "A Whiter Shade of Pale",
       "Procol Harum",
-      "FrMXOaM_sHo"
+      "FrMXOaM_sHo",
+      1967
     ],
     [
       "Build Me Up Buttercup",
       "The Foundations",
       "QbuSu1b-ejs"
+    ],
+    [
+      "Psychotic Reaction",
+      "Count Five",
+      "fBTT3VPriV8",
+      1966,
+      "deep"
+    ],
+    [
+      "Friday on My Mind",
+      "The Easybeats",
+      "NSowZcvoqr4",
+      1966,
+      "deep"
+    ],
+    [
+      "She's Not There",
+      "The Zombies",
+      "it68QbUWVPM",
+      1964,
+      "deep"
+    ],
+    [
+      "Pictures of Matchstick Men",
+      "Status Quo",
+      "3yIqbVDf3OU",
+      1968,
+      "deep"
+    ],
+    [
+      "Waterloo Sunset",
+      "The Kinks",
+      "N_MqfF0WBsU",
+      1967,
+      "deep"
+    ],
+    [
+      "Gimme Some Lovin'",
+      "The Spencer Davis Group",
+      "BuQ3PaFyb9A",
+      1966,
+      "popular"
+    ],
+    [
+      "Bus Stop",
+      "The Hollies",
+      "040XXYx6_5E",
+      1966,
+      "popular"
+    ],
+    [
+      "Do You Believe in Magic",
+      "The Lovin' Spoonful",
+      "JnbfuAcCqpY",
+      1965,
+      "popular"
+    ],
+    [
+      "Crimson and Clover",
+      "Tommy James and the Shondells",
+      "q65x6jddc88",
+      1968,
+      "popular"
+    ],
+    [
+      "Incense and Peppermints",
+      "Strawberry Alarm Clock",
+      "idJzMSKaHaw",
+      1967,
+      "popular"
+    ],
+    [
+      "Spooky",
+      "Classics IV",
+      "lKBynY99350",
+      1967,
+      "popular"
+    ],
+    [
+      "Son of a Preacher Man",
+      "Dusty Springfield",
+      "oAZLgsDRUv4",
+      1968,
+      "popular"
+    ],
+    [
+      "River Deep – Mountain High",
+      "Ike & Tina Turner",
+      "pWK7v0gIHLo",
+      1966,
+      "popular"
+    ],
+    [
+      "You Keep Me Hangin' On",
+      "The Supremes",
+      "A9MwPMHEjNM",
+      1966,
+      "popular"
+    ],
+    [
+      "Walk Away Renée",
+      "The Left Banke",
+      "PtHq6SVOXEk",
+      1966,
+      "popular"
+    ],
+    [
+      "Hurdy Gurdy Man",
+      "Donovan",
+      "CHxfOZH8cew",
+      1968,
+      "deep"
+    ],
+    [
+      "Mony Mony",
+      "Tommy James and the Shondells",
+      "qdrx9F6WEzM",
+      1968,
+      "deep"
+    ],
+    [
+      "Dance to the Music",
+      "Sly and the Family Stone",
+      "Jn2PNlhvy8E",
+      1967,
+      "deep"
+    ],
+    [
+      "I Get Around",
+      "The Beach Boys",
+      "BchXkabxn4A",
+      1964,
+      "deep"
+    ],
+    [
+      "Monday, Monday",
+      "The Mamas & the Papas",
+      "sWGh92O9kxU",
+      1966,
+      "deep"
+    ],
+    [
+      "Happy Together",
+      "The Turtles",
+      "pSw8an1u3rc",
+      1967,
+      "deep"
+    ],
+    [
+      "Magic Carpet Ride",
+      "Steppenwolf",
+      "eGkGNCUQtWY",
+      1968,
+      "deep"
+    ],
+    [
+      "Fortunate Son",
+      "Creedence Clearwater Revival",
+      "3RmQTYLD398",
+      1969,
+      "deep"
+    ],
+    [
+      "Gimme Shelter",
+      "The Rolling Stones",
+      "RbmS3tQJ7Os",
+      1969,
+      "deep"
+    ],
+    [
+      "Bad Moon Rising",
+      "Creedence Clearwater Revival",
+      "tKJwvQfraY8",
+      1969,
+      "deep"
+    ],
+    [
+      "Soul Man",
+      "Sam & Dave",
+      "S_OX2HwWy-o",
+      1967,
+      "deep"
+    ],
+    [
+      "Chain of Fools",
+      "Aretha Franklin",
+      "MWOpINYVU38",
+      1967,
+      "deep"
+    ],
+    [
+      "I Say a Little Prayer",
+      "Dionne Warwick",
+      "04-SxMlByP4",
+      1967,
+      "deep"
+    ],
+    [
+      "Wichita Lineman",
+      "Glen Campbell",
+      "Q8P_xTBpAcY",
+      1968,
+      "deep"
+    ],
+    [
+      "Oh, Pretty Woman",
+      "Roy Orbison",
+      "Ikweq0THs88",
+      1964,
+      "deep"
     ]
   ],
   "1970s": [
@@ -542,7 +987,8 @@
     [
       "Stayin' Alive",
       "Bee Gees",
-      "fNFzfwLM72c"
+      "fNFzfwLM72c",
+      1978
     ],
     [
       "What's Going On",
@@ -597,7 +1043,8 @@
     [
       "Sweet Home Alabama",
       "Lynyrd Skynyrd",
-      "-35W_FWCT9Q"
+      "-35W_FWCT9Q",
+      1980
     ],
     [
       "More Than a Feeling",
@@ -607,7 +1054,8 @@
     [
       "Go Your Own Way",
       "Fleetwood Mac",
-      "ozl3L9fhKtE"
+      "ozl3L9fhKtE",
+      1980
     ],
     [
       "Dream On",
@@ -617,12 +1065,14 @@
     [
       "Free Bird",
       "Lynyrd Skynyrd",
-      "0LwcvjNJTuM"
+      "0LwcvjNJTuM",
+      1977
     ],
     [
       "You're So Vain",
       "Carly Simon",
-      "cleCtBP0o5Y"
+      "cleCtBP0o5Y",
+      1975
     ],
     [
       "Maggie May",
@@ -662,7 +1112,8 @@
     [
       "Ain't No Sunshine",
       "Bill Withers",
-      "YuKfiH0Scao"
+      "YuKfiH0Scao",
+      1971
     ],
     [
       "Miss You",
@@ -677,7 +1128,8 @@
     [
       "Bridge Over Troubled Water",
       "Simon & Garfunkel",
-      "4G-YQA_bsOU"
+      "4G-YQA_bsOU",
+      1970
     ],
     [
       "War",
@@ -687,7 +1139,8 @@
     [
       "American Woman",
       "The Guess Who",
-      "9uf6EY2BZBw"
+      "9uf6EY2BZBw",
+      1972
     ],
     [
       "Your Song",
@@ -712,12 +1165,14 @@
     [
       "Smoke on the Water",
       "Deep Purple",
-      "Q2FzZSBD5LE"
+      "Q2FzZSBD5LE",
+      1974
     ],
     [
       "Papa Was a Rollin' Stone",
       "The Temptations",
-      "pJV2pWFyfn4"
+      "pJV2pWFyfn4",
+      1972
     ],
     [
       "Let's Stay Together",
@@ -727,17 +1182,20 @@
     [
       "Bad, Bad Leroy Brown",
       "Jim Croce",
-      "QvwDohEEQ1E"
+      "QvwDohEEQ1E",
+      1973
     ],
     [
       "Dust in the Wind",
       "Kansas",
-      "tH2w6Oxx0kQ"
+      "tH2w6Oxx0kQ",
+      1980
     ],
     [
       "Baker Street",
       "Gerry Rafferty",
-      "Fo6aKnRnBxM"
+      "Fo6aKnRnBxM",
+      1979
     ],
     [
       "Heart of Glass",
@@ -747,12 +1205,223 @@
     [
       "Night Fever",
       "Bee Gees",
-      "-ihs-vT9T3Q"
+      "-ihs-vT9T3Q",
+      1977
     ],
     [
       "Good Times",
       "Chic",
       "HeeDOVcVUQY"
+    ],
+    [
+      "Marquee Moon",
+      "Television",
+      "jlbunmCbTBA",
+      1977,
+      "deep"
+    ],
+    [
+      "Surrender",
+      "Cheap Trick",
+      "T_Km11HNzUY",
+      1978,
+      "deep"
+    ],
+    [
+      "Roadrunner",
+      "The Modern Lovers",
+      "Gy88-5pc7c8",
+      1976,
+      "deep"
+    ],
+    [
+      "Because the Night",
+      "Patti Smith Group",
+      "c_BcivBprM0",
+      1978,
+      "deep"
+    ],
+    [
+      "Fox on the Run",
+      "Sweet",
+      "qBdFA6sI6-8",
+      1975,
+      "deep"
+    ],
+    [
+      "Roundabout",
+      "Yes",
+      "LuGAWR2eRyQ",
+      1971,
+      "popular"
+    ],
+    [
+      "Evil Woman",
+      "Electric Light Orchestra",
+      "nxz1DuVaRr8",
+      1975,
+      "popular"
+    ],
+    [
+      "Ballroom Blitz",
+      "Sweet",
+      "mPQPdYttl7U",
+      1973,
+      "popular"
+    ],
+    [
+      "All Right Now",
+      "Free",
+      "7cQ4jNDRTOo",
+      1970,
+      "popular"
+    ],
+    [
+      "Long Train Runnin'",
+      "The Doobie Brothers",
+      "zpP4ytpunoY",
+      1973,
+      "popular"
+    ],
+    [
+      "The Joker",
+      "Steve Miller Band",
+      "q3mfENm6VJc",
+      1973,
+      "popular"
+    ],
+    [
+      "Reelin' in the Years",
+      "Steely Dan",
+      "91XTZ92zs2w",
+      1972,
+      "popular"
+    ],
+    [
+      "Listen to the Music",
+      "The Doobie Brothers",
+      "nbVE-1rHyVY",
+      1972,
+      "popular"
+    ],
+    [
+      "Don't Bring Me Down",
+      "Electric Light Orchestra",
+      "-rD-0tlGGPo",
+      1979,
+      "popular"
+    ],
+    [
+      "Renegade",
+      "Styx",
+      "E9eLz4DrwF8",
+      1978,
+      "popular"
+    ],
+    [
+      "Barracuda",
+      "Heart",
+      "VdOkQ6THDVw",
+      1977,
+      "deep"
+    ],
+    [
+      "Carry on Wayward Son",
+      "Kansas",
+      "2X_2IdybTV0",
+      1976,
+      "deep"
+    ],
+    [
+      "Black Betty",
+      "Ram Jam",
+      "4cn_woPvjQI",
+      1977,
+      "deep"
+    ],
+    [
+      "The Boys Are Back in Town",
+      "Thin Lizzy",
+      "wIE5wwvicew",
+      1976,
+      "deep"
+    ],
+    [
+      "Couldn't Get It Right",
+      "Climax Blues Band",
+      "leJPJ764Bxs",
+      1976,
+      "deep"
+    ],
+    [
+      "Dancing in the Moonlight",
+      "King Harvest",
+      "g5JqPxmYhlo",
+      1972,
+      "deep"
+    ],
+    [
+      "Stuck in the Middle with You",
+      "Stealers Wheel",
+      "ln7Vn_WKkWU",
+      1972,
+      "deep"
+    ],
+    [
+      "Brandy (You're a Fine Girl)",
+      "Looking Glass",
+      "DVx8L7a3MuE",
+      1972,
+      "deep"
+    ],
+    [
+      "Magic Man",
+      "Heart",
+      "AZTo3iJng7U",
+      1975,
+      "deep"
+    ],
+    [
+      "Love Is the Drug",
+      "Roxy Music",
+      "NE49NdNnBxA",
+      1975,
+      "deep"
+    ],
+    [
+      "One Way or Another",
+      "Blondie",
+      "_zBwRDEFMRY",
+      1978,
+      "deep"
+    ],
+    [
+      "Rock Lobster",
+      "The B-52's",
+      "vz65vonktMA",
+      1978,
+      "deep"
+    ],
+    [
+      "My Best Friend's Girl",
+      "The Cars",
+      "j-dfrHkaXuE",
+      1978,
+      "deep"
+    ],
+    [
+      "Cruel to Be Kind",
+      "Nick Lowe",
+      "0Vo4lNb0w48",
+      1979,
+      "deep"
+    ],
+    [
+      "(Don't Fear) The Reaper",
+      "Blue Öyster Cult",
+      "Dy4HA3vUv2c",
+      1976,
+      "deep"
     ]
   ],
   "1980s": [
@@ -769,7 +1438,8 @@
     [
       "Sweet Child o' Mine",
       "Guns N' Roses",
-      "1w7OgIMMRc4"
+      "1w7OgIMMRc4",
+      1990
     ],
     [
       "Every Breath You Take",
@@ -814,7 +1484,8 @@
     [
       "Girls Just Want to Have Fun",
       "Cyndi Lauper",
-      "PIb6AZdTr-A"
+      "PIb6AZdTr-A",
+      1983
     ],
     [
       "Sweet Dreams (Are Made of This)",
@@ -854,12 +1525,14 @@
     [
       "I Love Rock 'n' Roll",
       "Joan Jett & the Blackhearts",
-      "wMsazR6Tnf8"
+      "wMsazR6Tnf8",
+      1981
     ],
     [
       "Wake Me Up Before You Go-Go",
       "Wham!",
-      "pIgZ7gMze7A"
+      "pIgZ7gMze7A",
+      1984
     ],
     [
       "Karma Chameleon",
@@ -869,7 +1542,8 @@
     [
       "Come On Eileen",
       "Dexys Midnight Runners",
-      "7C3c2PqBM3U"
+      "7C3c2PqBM3U",
+      1990
     ],
     [
       "Tainted Love",
@@ -884,7 +1558,8 @@
     [
       "Hungry Like the Wolf",
       "Duran Duran",
-      "oJL-lCzEXgI"
+      "oJL-lCzEXgI",
+      1984
     ],
     [
       "Sledgehammer",
@@ -914,7 +1589,8 @@
     [
       "Never Gonna Give You Up",
       "Rick Astley",
-      "dQw4w9WgXcQ"
+      "dQw4w9WgXcQ",
+      1988
     ],
     [
       "Faith",
@@ -954,7 +1630,8 @@
     [
       "West End Girls",
       "Pet Shop Boys",
-      "p3j2NYZ8FKs"
+      "p3j2NYZ8FKs",
+      1986
     ],
     [
       "Addicted to Love",
@@ -964,7 +1641,8 @@
     [
       "Pour Some Sugar on Me",
       "Def Leppard",
-      "0UIB9Y4OFPs"
+      "0UIB9Y4OFPs",
+      1988
     ],
     [
       "Here I Go Again",
@@ -1004,14 +1682,226 @@
     [
       "Rebel Yell",
       "Billy Idol",
-      "VdphvuyaV_I"
+      "VdphvuyaV_I",
+      1990
+    ],
+    [
+      "There Is a Light That Never Goes Out",
+      "The Smiths",
+      "siO6dkqidc4",
+      1986,
+      "deep"
+    ],
+    [
+      "Just Like Heaven",
+      "The Cure",
+      "n3nPiBai66M",
+      1987,
+      "deep"
+    ],
+    [
+      "The Killing Moon",
+      "Echo & the Bunnymen",
+      "LWz0JC7afNQ",
+      1984,
+      "deep"
+    ],
+    [
+      "This Must Be the Place (Naive Melody)",
+      "Talking Heads",
+      "o9gK2fOq4MY",
+      1983,
+      "deep"
+    ],
+    [
+      "A Forest",
+      "The Cure",
+      "xik-y0xlpZ0",
+      1980,
+      "deep"
+    ],
+    [
+      "Major Tom (Coming Home)",
+      "Peter Schilling",
+      "Ggkaj2lRPuM",
+      1983,
+      "popular"
+    ],
+    [
+      "867-5309/Jenny",
+      "Tommy Tutone",
+      "6WTdTwcmxyo",
+      1981,
+      "popular"
+    ],
+    [
+      "Your Love",
+      "The Outfield",
+      "OcZFpkHEhLA",
+      1985,
+      "popular"
+    ],
+    [
+      "The Promise",
+      "When in Rome",
+      "oRC2XC5MVVU",
+      1988,
+      "popular"
+    ],
+    [
+      "Obsession",
+      "Animotion",
+      "VVyO_baQI-4",
+      1984,
+      "popular"
+    ],
+    [
+      "Voices Carry",
+      "'Til Tuesday",
+      "zUKXhRikfPw",
+      1985,
+      "popular"
+    ],
+    [
+      "And We Danced",
+      "The Hooters",
+      "yS2RUswqFYU",
+      1985,
+      "popular"
+    ],
+    [
+      "In a Big Country",
+      "Big Country",
+      "daeqb6f7GrY",
+      1983,
+      "popular"
+    ],
+    [
+      "Don't Dream It's Over",
+      "Crowded House",
+      "xwsaVHiiFQ8",
+      1986,
+      "popular"
+    ],
+    [
+      "Beds Are Burning",
+      "Midnight Oil",
+      "zNW2XkvaL6U",
+      1987,
+      "popular"
+    ],
+    [
+      "Head Over Heels",
+      "Tears for Fears",
+      "726IPv--fko",
+      1985,
+      "deep"
+    ],
+    [
+      "Never Tear Us Apart",
+      "INXS",
+      "NJ62S3A9wn0",
+      1987,
+      "deep"
+    ],
+    [
+      "I Melt with You",
+      "Modern English",
+      "xvEgcjbhbx4",
+      1982,
+      "deep"
+    ],
+    [
+      "Kids in America",
+      "Kim Wilde",
+      "i5HDfxDW7Ck",
+      1981,
+      "deep"
+    ],
+    [
+      "The Look",
+      "Roxette",
+      "dzrPH89rtWY",
+      1988,
+      "deep"
+    ],
+    [
+      "She Drives Me Crazy",
+      "Fine Young Cannibals",
+      "dLDjBZKDnVk",
+      1988,
+      "deep"
+    ],
+    [
+      "Electric Blue",
+      "Icehouse",
+      "zeV_POB16f8",
+      1987,
+      "deep"
+    ],
+    [
+      "Cult of Personality",
+      "Living Colour",
+      "d5VYBPb3d9c",
+      1988,
+      "deep"
+    ],
+    [
+      "Love Shack",
+      "The B-52's",
+      "O5mfIPZ_VJ4",
+      1989,
+      "deep"
+    ],
+    [
+      "Bust a Move",
+      "Young MC",
+      "wet0f9sA0eU",
+      1989,
+      "deep"
+    ],
+    [
+      "Straight Up",
+      "Paula Abdul",
+      "Uq8sAQMVQJg",
+      1988,
+      "deep"
+    ],
+    [
+      "Buffalo Stance",
+      "Neneh Cherry",
+      "JWsRz3TJDEY",
+      1988,
+      "deep"
+    ],
+    [
+      "Free Fallin'",
+      "Tom Petty",
+      "SccggMlZQtw",
+      1989,
+      "deep"
+    ],
+    [
+      "Roam",
+      "The B-52's",
+      "FuJDNYT3n0w",
+      1989,
+      "deep"
+    ],
+    [
+      "Back on the Chain Gang",
+      "The Pretenders",
+      "dCYyv-qYF_0",
+      1982,
+      "deep"
     ]
   ],
   "1990s": [
     [
       "Smells Like Teen Spirit",
       "Nirvana",
-      "hTWKbfoikeg"
+      "hTWKbfoikeg",
+      1991
     ],
     [
       "Wonderwall",
@@ -1021,7 +1911,8 @@
     [
       "...Baby One More Time",
       "Britney Spears",
-      "C-u5WLJ9Yk4"
+      "C-u5WLJ9Yk4",
+      2000
     ],
     [
       "No Diggity",
@@ -1031,7 +1922,8 @@
     [
       "I Will Always Love You",
       "Whitney Houston",
-      "3JWTaaS7LdU"
+      "3JWTaaS7LdU",
+      1992
     ],
     [
       "Waterfalls",
@@ -1076,12 +1968,14 @@
     [
       "Nothing Compares 2 U",
       "Sinead O'Connor",
-      "0-EF60neguk"
+      "0-EF60neguk",
+      1996
     ],
     [
       "Under the Bridge",
       "Red Hot Chili Peppers",
-      "GLvohMXgcBo"
+      "GLvohMXgcBo",
+      1991
     ],
     [
       "Jump Around",
@@ -1106,7 +2000,8 @@
     [
       "Interstate Love Song",
       "Stone Temple Pilots",
-      "yjJL9DGU7Gg"
+      "yjJL9DGU7Gg",
+      1994
     ],
     [
       "Man in the Box",
@@ -1121,7 +2016,8 @@
     [
       "Semi-Charmed Life",
       "Third Eye Blind",
-      "beINamVRGy4"
+      "beINamVRGy4",
+      1998
     ],
     [
       "1979",
@@ -1131,7 +2027,8 @@
     [
       "Mr. Jones",
       "Counting Crows",
-      "-oqAU5VxFWs"
+      "-oqAU5VxFWs",
+      1994
     ],
     [
       "Ironic",
@@ -1156,7 +2053,8 @@
     [
       "Baby Got Back",
       "Sir Mix-a-Lot",
-      "HtqOHuhH7R0"
+      "HtqOHuhH7R0",
+      1994
     ],
     [
       "Believe",
@@ -1171,7 +2069,8 @@
     [
       "Give It Away",
       "Red Hot Chili Peppers",
-      "Mr_uHJPUlO8"
+      "Mr_uHJPUlO8",
+      1991
     ],
     [
       "Loser",
@@ -1211,7 +2110,8 @@
     [
       "Ice Ice Baby",
       "Vanilla Ice",
-      "kPU9zuStFII"
+      "kPU9zuStFII",
+      1990
     ],
     [
       "U Can't Touch This",
@@ -1231,12 +2131,14 @@
     [
       "Doo Wop (That Thing)",
       "Lauryn Hill",
-      "T6QKqFPRZSA"
+      "T6QKqFPRZSA",
+      1999
     ],
     [
       "Macarena (Bayside Boys Remix)",
       "Los Del Rio",
-      "qxa9C2ESdrc"
+      "qxa9C2ESdrc",
+      1996
     ],
     [
       "The Sign",
@@ -1257,6 +2159,216 @@
       "Return of the Mack",
       "Mark Morrison",
       "uB1D9wWxd2w"
+    ],
+    [
+      "Fade Into You",
+      "Mazzy Star",
+      "ImKY6TZEyrI",
+      1993,
+      "deep"
+    ],
+    [
+      "Cannonball",
+      "The Breeders",
+      "fxvkI9MTQw4",
+      1993,
+      "deep"
+    ],
+    [
+      "Connection",
+      "Elastica",
+      "ilKcXIFi-Rc",
+      1994,
+      "deep"
+    ],
+    [
+      "Common People",
+      "Pulp",
+      "yuTMWgOduFM",
+      1995,
+      "deep"
+    ],
+    [
+      "Ready to Go",
+      "Republica",
+      "JgffRW1fKDk",
+      1996,
+      "deep"
+    ],
+    [
+      "Plush",
+      "Stone Temple Pilots",
+      "Dg0apFNHTik",
+      1992,
+      "popular"
+    ],
+    [
+      "Flagpole Sitta",
+      "Harvey Danger",
+      "sVt1Dy_LblQ",
+      1997,
+      "popular"
+    ],
+    [
+      "Save Tonight",
+      "Eagle-Eye Cherry",
+      "Nntd2fgMUYw",
+      1997,
+      "popular"
+    ],
+    [
+      "Steal My Sunshine",
+      "Len",
+      "teUlISh-TiA",
+      1999,
+      "popular"
+    ],
+    [
+      "You Get What You Give",
+      "New Radicals",
+      "US2UDj_Gvo4",
+      1998,
+      "popular"
+    ],
+    [
+      "Celebrity Skin",
+      "Hole",
+      "SjnKU2V2e1Y",
+      1998,
+      "popular"
+    ],
+    [
+      "Laid",
+      "James",
+      "5yXqRiXMru0",
+      1993,
+      "popular"
+    ],
+    [
+      "Here & Now",
+      "Letters to Cleo",
+      "gyXRkxSfOPs",
+      1993,
+      "popular"
+    ],
+    [
+      "Possum Kingdom",
+      "Toadies",
+      "EkwD5rQ-_d4",
+      1994,
+      "popular"
+    ],
+    [
+      "Pepper",
+      "Butthole Surfers",
+      "UgLY1KiRM64",
+      1996,
+      "popular"
+    ],
+    [
+      "The Freshmen",
+      "The Verve Pipe",
+      "1umEXpGHc0E",
+      1996,
+      "deep"
+    ],
+    [
+      "Inside Out",
+      "Eve 6",
+      "Kn6VkovVUgU",
+      1998,
+      "deep"
+    ],
+    [
+      "Closing Time",
+      "Semisonic",
+      "970Lq2M_ld0",
+      1998,
+      "deep"
+    ],
+    [
+      "Sex and Candy",
+      "Marcy Playground",
+      "-KT-r2vHeMM",
+      1997,
+      "deep"
+    ],
+    [
+      "Popular",
+      "Nada Surf",
+      "hAFuD-S-e_E",
+      1996,
+      "deep"
+    ],
+    [
+      "Banditos",
+      "The Refreshments",
+      "d_m0kwGQG4w",
+      1996,
+      "deep"
+    ],
+    [
+      "Lump",
+      "The Presidents of the United States of America",
+      "7sPmiQBy2kw",
+      1995,
+      "deep"
+    ],
+    [
+      "Santa Monica",
+      "Everclear",
+      "5Hhp2ca9WSc",
+      1995,
+      "deep"
+    ],
+    [
+      "Bound for the Floor",
+      "Local H",
+      "E2Oe5YKhzCE",
+      1996,
+      "deep"
+    ],
+    [
+      "Female of the Species",
+      "Space",
+      "cKqEg_y95Qw",
+      1996,
+      "deep"
+    ],
+    [
+      "Drinking in L.A.",
+      "Bran Van 3000",
+      "-_5yNLsZ5Pk",
+      1997,
+      "deep"
+    ],
+    [
+      "Praise You",
+      "Fatboy Slim",
+      "1BoXlv-TV2c",
+      1998,
+      "deep"
+    ],
+    [
+      "Brimful of Asha",
+      "Cornershop",
+      "E4SMH-gxri4",
+      1997,
+      "deep"
+    ],
+    [
+      "Groove Is in the Heart",
+      "Deee-Lite",
+      "hIpT8H40Apo",
+      1990,
+      "deep"
+    ],
+    [
+      "Virtual Insanity",
+      "Jamiroquai",
+      "b9Y4TACmvE8",
+      1996,
+      "deep"
     ]
   ],
   "2000s": [
@@ -1278,7 +2390,8 @@
     [
       "Since U Been Gone",
       "Kelly Clarkson",
-      "l9zaxb7ZvNA"
+      "l9zaxb7ZvNA",
+      2003
     ],
     [
       "In da Club",
@@ -1298,17 +2411,20 @@
     [
       "Complicated",
       "Avril Lavigne",
-      "5NPBIwQyPWE"
+      "5NPBIwQyPWE",
+      2003
     ],
     [
       "Hips Don't Lie",
       "Shakira",
-      "DUT5rEU6pqM"
+      "DUT5rEU6pqM",
+      2010
     ],
     [
       "Boulevard of Broken Dreams",
       "Green Day",
-      "Soa3gO7tL-c"
+      "Soa3gO7tL-c",
+      2004
     ],
     [
       "Toxic",
@@ -1328,7 +2444,8 @@
     [
       "Poker Face",
       "Lady Gaga",
-      "bESGLojNYSo"
+      "bESGLojNYSo",
+      2010
     ],
     [
       "Viva la Vida",
@@ -1338,17 +2455,20 @@
     [
       "I Gotta Feeling",
       "The Black Eyed Peas",
-      "uSD4vsh1zDA"
+      "uSD4vsh1zDA",
+      2010
     ],
     [
       "Say My Name",
       "Destiny's Child",
-      "sQgd6MccwZc"
+      "sQgd6MccwZc",
+      2003
     ],
     [
       "Oops!... I Did It Again",
       "Britney Spears",
-      "BuN4ujLa8pU"
+      "BuN4ujLa8pU",
+      2001
     ],
     [
       "Yellow",
@@ -1373,12 +2493,14 @@
     [
       "A Thousand Miles",
       "Vanessa Carlton",
-      "Cwkej79U3ek"
+      "Cwkej79U3ek",
+      2002
     ],
     [
       "Seven Nation Army",
       "The White Stripes",
-      "0J2QdDbelmY"
+      "0J2QdDbelmY",
+      2003
     ],
     [
       "Milkshake",
@@ -1388,7 +2510,8 @@
     [
       "Gold Digger",
       "Kanye West ft. Jamie Foxx",
-      "Blta88NFtPs"
+      "Blta88NFtPs",
+      2005
     ],
     [
       "Bye Bye Bye",
@@ -1398,7 +2521,8 @@
     [
       "Hollaback Girl",
       "Gwen Stefani",
-      "Kgjkth6BRRY"
+      "Kgjkth6BRRY",
+      2005
     ],
     [
       "SexyBack",
@@ -1413,7 +2537,8 @@
     [
       "Promiscuous",
       "Nelly Furtado",
-      "0J3vgcE5i2o"
+      "0J3vgcE5i2o",
+      2006
     ],
     [
       "Dilemma",
@@ -1433,27 +2558,241 @@
     [
       "Chasing Cars",
       "Snow Patrol",
-      "GemKqzILV4w"
+      "GemKqzILV4w",
+      2006
     ],
     [
       "How to Save a Life",
       "The Fray",
-      "cjVQ36NhbMk"
+      "cjVQ36NhbMk",
+      2008
     ],
     [
       "Use Somebody",
       "Kings of Leon",
-      "gnhXHvRoUd0"
+      "gnhXHvRoUd0",
+      2009
     ],
     [
       "I Kissed a Girl",
       "Katy Perry",
-      "tAp9BKosZXs"
+      "tAp9BKosZXs",
+      2009
     ],
     [
       "Just Dance",
       "Lady Gaga",
       "2Abk1jAONjw"
+    ],
+    [
+      "Maps",
+      "Yeah Yeah Yeahs",
+      "oIIxlgcuQRU",
+      2003,
+      "deep"
+    ],
+    [
+      "Such Great Heights",
+      "The Postal Service",
+      "0wrsZog8qXg",
+      2003,
+      "deep"
+    ],
+    [
+      "Take Me Out",
+      "Franz Ferdinand",
+      "Ijk4j-r7qPA",
+      2004,
+      "deep"
+    ],
+    [
+      "Young Folks",
+      "Peter Bjorn and John",
+      "OIRE6iw-ws4",
+      2006,
+      "deep"
+    ],
+    [
+      "Float On",
+      "Modest Mouse",
+      "CTAud5O7Qqk",
+      2004,
+      "deep"
+    ],
+    [
+      "Paper Planes",
+      "M.I.A.",
+      "s9M2JQTDjiA",
+      2007,
+      "popular"
+    ],
+    [
+      "Dog Days Are Over",
+      "Florence + the Machine",
+      "i8CDxQc_9-E",
+      2008,
+      "popular"
+    ],
+    [
+      "Kids",
+      "MGMT",
+      "DngxJlZSpPo",
+      2007,
+      "popular"
+    ],
+    [
+      "Electric Feel",
+      "MGMT",
+      "VI2XVLoPMJs",
+      2007,
+      "popular"
+    ],
+    [
+      "Lisztomania",
+      "Phoenix",
+      "uF3reVVUbio",
+      2009,
+      "popular"
+    ],
+    [
+      "Oxford Comma",
+      "Vampire Weekend",
+      "P_i1xk07o4g",
+      2008,
+      "popular"
+    ],
+    [
+      "Dashboard",
+      "Modest Mouse",
+      "WiwWeFx-H1U",
+      2007,
+      "popular"
+    ],
+    [
+      "New Slang",
+      "The Shins",
+      "kGpAMPS_t8U",
+      2001,
+      "popular"
+    ],
+    [
+      "Fell in Love with a Girl",
+      "The White Stripes",
+      "fTH71AAxXmM",
+      2001,
+      "popular"
+    ],
+    [
+      "Last Nite",
+      "The Strokes",
+      "6rkLF0zxp7E",
+      2001,
+      "popular"
+    ],
+    [
+      "Reptilia",
+      "The Strokes",
+      "SsXQoDiQC-o",
+      2003,
+      "deep"
+    ],
+    [
+      "Lazy Eye",
+      "Silversun Pickups",
+      "O_zvGIBreoI",
+      2006,
+      "deep"
+    ],
+    [
+      "1901",
+      "Phoenix",
+      "LPOqvIlFwFc",
+      2009,
+      "deep"
+    ],
+    [
+      "Heartbeats",
+      "The Knife",
+      "jcU7gmU1-WQ",
+      2002,
+      "deep"
+    ],
+    [
+      "Sleepyhead",
+      "Passion Pit",
+      "na1OdO30Yp8",
+      2008,
+      "deep"
+    ],
+    [
+      "Heads Will Roll",
+      "Yeah Yeah Yeahs",
+      "qkc-lBOLihI",
+      2009,
+      "deep"
+    ],
+    [
+      "Time to Pretend",
+      "MGMT",
+      "kEFkYAnBsVk",
+      2007,
+      "deep"
+    ],
+    [
+      "Wolf Like Me",
+      "TV on the Radio",
+      "8NceNkPFbEw",
+      2006,
+      "deep"
+    ],
+    [
+      "Banquet",
+      "Bloc Party",
+      "vdkmhquF60o",
+      2005,
+      "deep"
+    ],
+    [
+      "Helicopter",
+      "Bloc Party",
+      "zpjRmIqrejg",
+      2004,
+      "deep"
+    ],
+    [
+      "Apply Some Pressure",
+      "Maxïmo Park",
+      "wNU0ndhdmqE",
+      2005,
+      "deep"
+    ],
+    [
+      "America",
+      "Razorlight",
+      "fZ8GaBoZy1A",
+      2006,
+      "deep"
+    ],
+    [
+      "Chelsea Dagger",
+      "The Fratellis",
+      "cHde73avRuQ",
+      2006,
+      "deep"
+    ],
+    [
+      "Naive",
+      "The Kooks",
+      "TEJ1mM4gHWI",
+      2006,
+      "deep"
+    ],
+    [
+      "Golden Skans",
+      "Klaxons",
+      "LX2KX0OaofI",
+      2007,
+      "deep"
     ]
   ],
   "2010s": [
@@ -1470,12 +2809,14 @@
     [
       "Shape of You",
       "Ed Sheeran",
-      "JGwWNGJdvx8"
+      "JGwWNGJdvx8",
+      2017
     ],
     [
       "Somebody That I Used to Know",
       "Gotye",
-      "8UVNT4wvIGY"
+      "8UVNT4wvIGY",
+      2011
     ],
     [
       "Royals",
@@ -1485,7 +2826,8 @@
     [
       "Thrift Shop",
       "Macklemore & Ryan Lewis",
-      "QK8mJJJvaes"
+      "QK8mJJJvaes",
+      2012
     ],
     [
       "Happy",
@@ -1495,37 +2837,44 @@
     [
       "Get Lucky",
       "Daft Punk",
-      "CCHdMIEGaaM"
+      "CCHdMIEGaaM",
+      2013
     ],
     [
       "Old Town Road",
       "Lil Nas X",
-      "r7qovpFAGrQ"
+      "r7qovpFAGrQ",
+      2018
     ],
     [
       "Bad Romance",
       "Lady Gaga",
-      "qrO4YZeyl0I"
+      "qrO4YZeyl0I",
+      2014
     ],
     [
       "Firework",
       "Katy Perry",
-      "QGJuMBdaqIw"
+      "QGJuMBdaqIw",
+      2019
     ],
     [
       "Can't Stop the Feeling!",
       "Justin Timberlake",
-      "ru0K8uYEZWw"
+      "ru0K8uYEZWw",
+      2019
     ],
     [
       "Despacito",
       "Luis Fonsi",
-      "gGsqTwENFMI"
+      "gGsqTwENFMI",
+      2017
     ],
     [
       "Sicko Mode",
       "Travis Scott",
-      "6ONRf7h3Mdk"
+      "6ONRf7h3Mdk",
+      2018
     ],
     [
       "God's Plan",
@@ -1535,17 +2884,20 @@
     [
       "Radioactive",
       "Imagine Dragons",
-      "ANkhOIzuRu4"
+      "ANkhOIzuRu4",
+      2018
     ],
     [
       "Party Rock Anthem",
       "LMFAO",
-      "Fyx8odNJ1Q4"
+      "Fyx8odNJ1Q4",
+      2011
     ],
     [
       "Someone Like You",
       "Adele",
-      "hLQl3WQQoQ0"
+      "hLQl3WQQoQ0",
+      2011
     ],
     [
       "Levels",
@@ -1555,7 +2907,8 @@
     [
       "Wake Me Up",
       "Avicii",
-      "IcrbM1l_BoI"
+      "IcrbM1l_BoI",
+      2013
     ],
     [
       "Titanium",
@@ -1575,7 +2928,8 @@
     [
       "Wrecking Ball",
       "Miley Cyrus",
-      "My2FRPA3Gf8"
+      "My2FRPA3Gf8",
+      2013
     ],
     [
       "Sorry",
@@ -1585,7 +2939,8 @@
     [
       "Bad Guy",
       "Billie Eilish",
-      "DyDfgMOUjCI"
+      "DyDfgMOUjCI",
+      2019
     ],
     [
       "Havana",
@@ -1595,32 +2950,38 @@
     [
       "Closer",
       "The Chainsmokers ft. Halsey",
-      "0zGcUoRlhmw"
+      "0zGcUoRlhmw",
+      2016
     ],
     [
       "Shake It Off",
       "Taylor Swift",
-      "ZRU_9GwiTyA"
+      "ZRU_9GwiTyA",
+      2015
     ],
     [
       "All About That Bass",
       "Meghan Trainor",
-      "7PCkvCPvDXk"
+      "7PCkvCPvDXk",
+      2015
     ],
     [
       "Counting Stars",
       "OneRepublic",
-      "jgsKqZ_dZKI"
+      "jgsKqZ_dZKI",
+      2013
     ],
     [
       "Call Me Maybe",
       "Carly Rae Jepsen",
-      "RmYmKyAG-DQ"
+      "RmYmKyAG-DQ",
+      2016
     ],
     [
       "Thinking Out Loud",
       "Ed Sheeran",
-      "lp-EO5I60KA"
+      "lp-EO5I60KA",
+      2015
     ],
     [
       "Stay With Me",
@@ -1635,7 +2996,8 @@
     [
       "Locked Out of Heaven",
       "Bruno Mars",
-      "e-fA-gBCkj0"
+      "e-fA-gBCkj0",
+      2012
     ],
     [
       "Chandelier",
@@ -1660,7 +3022,8 @@
     [
       "Hotline Bling",
       "Drake",
-      "YP9c6OI_gms"
+      "YP9c6OI_gms",
+      2015
     ],
     [
       "One Dance",
@@ -1671,48 +3034,266 @@
       "Perfect",
       "Ed Sheeran",
       "2Vv-BfVoq4g"
+    ],
+    [
+      "Midnight City",
+      "M83",
+      "dX3k_QDnzHE",
+      2011,
+      "deep"
+    ],
+    [
+      "Breezeblocks",
+      "alt-J",
+      "rVeMiVU77wo",
+      2012,
+      "deep"
+    ],
+    [
+      "Seasons (Waiting on You)",
+      "Future Islands",
+      "-5Ae-LhMIG0",
+      2014,
+      "deep"
+    ],
+    [
+      "My Number",
+      "Foals",
+      "bAsGFnLl2u0",
+      2013,
+      "deep"
+    ],
+    [
+      "Oblivion",
+      "Grimes",
+      "JtH68PJIQLE",
+      2012,
+      "deep"
+    ],
+    [
+      "Pumped Up Kicks",
+      "Foster the People",
+      "k_aQYP8rsgE",
+      2010,
+      "popular"
+    ],
+    [
+      "Little Talks",
+      "Of Monsters and Men",
+      "IY8rOSyR5Rw",
+      2011,
+      "popular"
+    ],
+    [
+      "Tongue Tied",
+      "Grouplove",
+      "Fot9VQGVxAk",
+      2011,
+      "popular"
+    ],
+    [
+      "Mountain at My Gates",
+      "Foals",
+      "NUZKTYhIlfE",
+      2015,
+      "popular"
+    ],
+    [
+      "Shut Up and Dance",
+      "WALK THE MOON",
+      "nbcCG7PkI18",
+      2014,
+      "popular"
+    ],
+    [
+      "Take a Walk",
+      "Passion Pit",
+      "y6W0TzNxE2A",
+      2012,
+      "popular"
+    ],
+    [
+      "Safe and Sound",
+      "Capital Cities",
+      "mQmOZX-8EZI",
+      2011,
+      "popular"
+    ],
+    [
+      "Chocolate",
+      "The 1975",
+      "1GgAxw6hQRk",
+      2013,
+      "popular"
+    ],
+    [
+      "Riptide",
+      "Vance Joy",
+      "Y6TFSTHUxi0",
+      2013,
+      "popular"
+    ],
+    [
+      "Budapest",
+      "George Ezra",
+      "XyGSQjyaoDA",
+      2013,
+      "popular"
+    ],
+    [
+      "Ophelia",
+      "The Lumineers",
+      "uU8ea6wPQZs",
+      2016,
+      "deep"
+    ],
+    [
+      "Clearest Blue",
+      "CHVRCHES",
+      "QpFXXPruuqU",
+      2015,
+      "deep"
+    ],
+    [
+      "Somebody Else",
+      "The 1975",
+      "0-LXezXCUPU",
+      2016,
+      "deep"
+    ],
+    [
+      "The Less I Know the Better",
+      "Tame Impala",
+      "2SUwOgmvzK4",
+      2015,
+      "deep"
+    ],
+    [
+      "Feel It Still",
+      "Portugal. The Man",
+      "qDIMlYaT5Hg",
+      2017,
+      "deep"
+    ],
+    [
+      "Sit Next to Me",
+      "Foster the People",
+      "BKLVpDTZOPQ",
+      2017,
+      "deep"
+    ],
+    [
+      "Tokyo Drifting",
+      "Glass Animals feat. Denzel Curry",
+      "R_7HqeukRrI",
+      2019,
+      "deep"
+    ],
+    [
+      "Gooey",
+      "Glass Animals",
+      "jeo3an2M_Lo",
+      2014,
+      "deep"
+    ],
+    [
+      "Anna Sun",
+      "WALK THE MOON",
+      "uXBFfoBn3sM",
+      2010,
+      "deep"
+    ],
+    [
+      "Electric Love",
+      "BØRNS",
+      "-wiBRhX_QTU",
+      2014,
+      "deep"
+    ],
+    [
+      "Cigarette Daydreams",
+      "Cage the Elephant",
+      "Jt0w1XUzM2Q",
+      2014,
+      "deep"
+    ],
+    [
+      "Stolen Dance",
+      "Milky Chance",
+      "dAuAyA9dBBU",
+      2013,
+      "deep"
+    ],
+    [
+      "Geronimo",
+      "Sheppard",
+      "E-SeaCZE2TM",
+      2014,
+      "deep"
+    ],
+    [
+      "Cool Kids",
+      "Echosmith",
+      "YKCotHE1uNw",
+      2013,
+      "deep"
+    ],
+    [
+      "Shut Up Kiss Me",
+      "Angel Olsen",
+      "nleRCBhLr3k",
+      2016,
+      "deep"
     ]
   ],
   "2020s": [
     [
       "Blinding Lights",
       "The Weeknd",
-      "4NRXx6U8ABQ"
+      "4NRXx6U8ABQ",
+      2023
     ],
     [
       "Levitating",
       "Dua Lipa",
-      "TUVcZfQe-Kw"
+      "TUVcZfQe-Kw",
+      2026
     ],
     [
       "As It Was",
       "Harry Styles",
-      "H5v3kku4y6Q"
+      "H5v3kku4y6Q",
+      2022
     ],
     [
       "Flowers",
       "Miley Cyrus",
-      "G7KNmW9a75Y"
+      "G7KNmW9a75Y",
+      2023
     ],
     [
       "Anti-Hero",
       "Taylor Swift",
-      "b1kbLwvqugk"
+      "b1kbLwvqugk",
+      2022
     ],
     [
       "Good 4 U",
       "Olivia Rodrigo",
-      "gNi_6U5Pm_o"
+      "gNi_6U5Pm_o",
+      2022
     ],
     [
       "Watermelon Sugar",
       "Harry Styles",
-      "E07s5ZYygMg"
+      "E07s5ZYygMg",
+      2022
     ],
     [
       "Drivers License",
       "Olivia Rodrigo",
-      "ZmDBbnmKpqQ"
+      "ZmDBbnmKpqQ",
+      2021
     ],
     [
       "Kill Bill",
@@ -1722,12 +3303,14 @@
     [
       "Cruel Summer",
       "Taylor Swift",
-      "WKWAePTTOs0"
+      "WKWAePTTOs0",
+      2023
     ],
     [
       "Espresso",
       "Sabrina Carpenter",
-      "y_5ao3iwbf4"
+      "y_5ao3iwbf4",
+      2025
     ],
     [
       "Vampire",
@@ -1752,7 +3335,8 @@
     [
       "Paint the Town Red",
       "Doja Cat",
-      "m4_9TFeMfJE"
+      "m4_9TFeMfJE",
+      2023
     ],
     [
       "Stay",
@@ -1762,37 +3346,44 @@
     [
       "Heat Waves",
       "Glass Animals",
-      "mRD0-GxqHVo"
+      "mRD0-GxqHVo",
+      2021
     ],
     [
       "Montero (Call Me By Your Name)",
       "Lil Nas X",
-      "6swmTBVI83k"
+      "6swmTBVI83k",
+      2021
     ],
     [
       "Butter",
       "BTS",
-      "WMweEpGlu_U"
+      "WMweEpGlu_U",
+      2022
     ],
     [
       "Dynamite",
       "BTS",
-      "gdZLi9oWNZg"
+      "gdZLi9oWNZg",
+      2020
     ],
     [
       "Easy On Me",
       "Adele",
-      "U3ASj1L6_sY"
+      "U3ASj1L6_sY",
+      2021
     ],
     [
       "About Damn Time",
       "Lizzo",
-      "IXXxciRUMzE"
+      "IXXxciRUMzE",
+      2022
     ],
     [
       "Break My Soul",
       "Beyonce",
-      "7NoQFW20r1k"
+      "7NoQFW20r1k",
+      2022
     ],
     [
       "WAP",
@@ -1802,52 +3393,272 @@
     [
       "What Was I Made For?",
       "Billie Eilish",
-      "cW8VLC9nnTo"
+      "cW8VLC9nnTo",
+      2023
     ],
     [
       "Save Your Tears",
       "The Weeknd",
-      "XXYlFuWEuKI"
+      "XXYlFuWEuKI",
+      2019
     ],
     [
       "positions",
       "Ariana Grande",
-      "tcYodQoapMg"
+      "tcYodQoapMg",
+      2020
     ],
     [
       "deja vu",
       "Olivia Rodrigo",
-      "cii6ruuycQA"
+      "cii6ruuycQA",
+      2021
     ],
     [
       "Good Days",
       "SZA",
-      "2p3zZoraK9g"
+      "2p3zZoraK9g",
+      2022
     ],
     [
       "Late Night Talking",
       "Harry Styles",
-      "4VaqA-5aQTM"
+      "4VaqA-5aQTM",
+      2022
     ],
     [
       "Golden",
       "Harry Styles",
-      "P3cffdsEXXw"
+      "P3cffdsEXXw",
+      2022
     ],
     [
       "Big Energy",
       "Latto",
-      "T8GpG8C0YzA"
+      "T8GpG8C0YzA",
+      2021
     ],
     [
       "Super Freaky Girl",
       "Nicki Minaj",
-      "j5uAR9w7LBg"
+      "j5uAR9w7LBg",
+      2022
     ],
     [
       "Bad Habit",
       "Steve Lacy",
-      "VF-FGf_ZZiI"
+      "VF-FGf_ZZiI",
+      2024
+    ],
+    [
+      "Chaise Longue",
+      "Wet Leg",
+      "Zd9jeJk2UHQ",
+      2021,
+      "deep"
+    ],
+    [
+      "Silk Chiffon",
+      "MUNA feat. Phoebe Bridgers",
+      "fhyk9rchC2c",
+      2021,
+      "deep"
+    ],
+    [
+      "Not Strong Enough",
+      "boygenius",
+      "bIX_ouNJsTs",
+      2023,
+      "deep"
+    ],
+    [
+      "Pink Pony Club",
+      "Chappell Roan",
+      "GR3Liudev18",
+      2020,
+      "deep"
+    ],
+    [
+      "The Adults Are Talking",
+      "The Strokes",
+      "ewOPQZZn4SY",
+      2020,
+      "deep"
+    ],
+    [
+      "Kyoto",
+      "Phoebe Bridgers",
+      "Z61I9wW_t3w",
+      2020,
+      "popular"
+    ],
+    [
+      "Seventeen Going Under",
+      "Sam Fender",
+      "g9OWOW90eFI",
+      2021,
+      "popular"
+    ],
+    [
+      "End of Beginning",
+      "Djo",
+      "xy3AcmW0lrQ",
+      2022,
+      "popular"
+    ],
+    [
+      "Beautiful Things",
+      "Benson Boone",
+      "HU08BcK5SUY",
+      2024,
+      "popular"
+    ],
+    [
+      "Too Sweet",
+      "Hozier",
+      "aezstCBHOPQ",
+      2024,
+      "popular"
+    ],
+    [
+      "Lose Control",
+      "Teddy Swims",
+      "FkOpwodhROI",
+      2023,
+      "popular"
+    ],
+    [
+      "Messy",
+      "Lola Young",
+      "mhTiOYFF0wg",
+      2024,
+      "popular"
+    ],
+    [
+      "A Bar Song (Tipsy)",
+      "Shaboozey",
+      "nZjTtuNR3Og",
+      2024,
+      "popular"
+    ],
+    [
+      "Good Luck, Babe!",
+      "Chappell Roan",
+      "1RKqOmSkGgM",
+      2024,
+      "popular"
+    ],
+    [
+      "BIRDS OF A FEATHER",
+      "Billie Eilish",
+      "d5gf9dXbPi0",
+      2024,
+      "popular"
+    ],
+    [
+      "Stick Season",
+      "Noah Kahan",
+      "iWG6apzIWAk",
+      2022,
+      "deep"
+    ],
+    [
+      "Apple",
+      "Charli xcx",
+      "CPWxExGk7PM",
+      2024,
+      "deep"
+    ],
+    [
+      "360",
+      "Charli xcx",
+      "O_HoOpJ60C0",
+      2024,
+      "deep"
+    ],
+    [
+      "Von dutch",
+      "Charli xcx",
+      "RaiRdSlwsks",
+      2024,
+      "deep"
+    ],
+    [
+      "Guess",
+      "Charli xcx feat. Billie Eilish",
+      "huGd4efgdPA",
+      2024,
+      "deep"
+    ],
+    [
+      "Sailor Song",
+      "Gigi Perez",
+      "m0NZ-aH0G1g",
+      2024,
+      "deep"
+    ],
+    [
+      "That's So True",
+      "Gracie Abrams",
+      "W_YOJWZIjxo",
+      2024,
+      "deep"
+    ],
+    [
+      "The Door",
+      "Teddy Swims",
+      "DRqt_JVNUxs",
+      2024,
+      "deep"
+    ],
+    [
+      "Austin (Boots Stop Workin')",
+      "Dasha",
+      "fidUefPhRm4",
+      2023,
+      "deep"
+    ],
+    [
+      "Stargazing",
+      "Myles Smith",
+      "tKml80alH3Y",
+      2024,
+      "deep"
+    ],
+    [
+      "MILLION DOLLAR BABY",
+      "Tommy Richman",
+      "zG5YzRxOcsI",
+      2024,
+      "deep"
+    ],
+    [
+      "I Had Some Help",
+      "Post Malone feat. Morgan Wallen",
+      "11T6kF66dKY",
+      2024,
+      "deep"
+    ],
+    [
+      "Die With a Smile",
+      "Lady Gaga & Bruno Mars",
+      "PfH7jq_uSCM",
+      2024,
+      "deep"
+    ],
+    [
+      "Abracadabra",
+      "Lady Gaga",
+      "LXuSOkf2M3c",
+      2025,
+      "deep"
+    ],
+    [
+      "Ordinary",
+      "Alex Warren",
+      "u2ah9tWTkmk",
+      2025,
+      "deep"
     ]
   ]
 }

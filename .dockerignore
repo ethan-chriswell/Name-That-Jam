@@ -4,3 +4,6 @@ README.md
 docker-compose.yml
 node_modules
 npm-debug.log*
+*.db-wal
+*.db-shm
+.tools

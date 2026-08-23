@@ -8,6 +8,8 @@
     "start": "node server.js",
     "dev": "node --watch server.js",
     "db:build": "node scripts/build-database.js",
+    "db:enrich-years": "node scripts/enrich-release-years.js",
+    "db:import-additions": "node scripts/import-song-additions.js",
     "test": "node --test"
   },
   "engines": {
