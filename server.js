@@ -157,16 +157,33 @@ function makeQueue(settings) {
   const pool = getSongsByDecades(settings.decades)
     .filter(song => settings.mode !== "year" || Number.isInteger(song.releaseYear));
   const target = Math.min(settings.rounds, pool.length);
-  const popular = shuffle(pool.filter(song => song.popularity === "popular"));
-  const deep = shuffle(pool.filter(song => song.popularity === "deep"));
-  const deepRatio = { easy: 0, normal: 0.3, hard: 0.7 }[settings.difficulty];
-  const deepCount = Math.min(deep.length, Math.round(target * deepRatio));
-  let selected = deep.slice(0, deepCount).concat(popular.slice(0, target - deepCount));
-  if (selected.length < target) selected = selected.concat(deep.slice(deepCount, deepCount + target - selected.length));
+  const tierOrder = {
+    easy: ["easy", "normal", "hard"],
+    normal: ["normal", "easy", "hard"],
+    hard: ["hard", "normal", "easy"]
+  }[settings.difficulty];
+  const selected = [];
+  for (const tier of tierOrder) {
+    const remaining = target - selected.length;
+    if (!remaining) break;
+    selected.push(...shuffle(pool.filter(song => song.difficulty === tier)).slice(0, remaining));
+  }
   return shuffle(selected).map(song => {
     const distractors = shuffle(pool.filter(other => other.title !== song.title)).slice(0, 3);
     return { ...song, choices: shuffle([song, ...distractors]).map(item => `${item.title} — ${item.artist}`) };
   });
+}
+
+function buildSettings(raw) {
+  const decades = Array.isArray(raw?.decades) ? raw.decades.filter(d => DECADES.includes(d)) : [];
+  const difficulty = ["easy", "normal", "hard"].includes(raw?.difficulty) ? raw.difficulty : "normal";
+  return {
+    decades: decades.length ? decades : DECADES,
+    rounds: [5, 10, 15].includes(Number(raw?.rounds)) ? Number(raw.rounds) : 10,
+    seconds: { easy: 45, normal: 30, hard: 20 }[difficulty],
+    difficulty,
+    mode: ["type", "year"].includes(raw?.mode) ? raw.mode : "mc"
+  };
 }
 
 app.use(express.json());
@@ -181,15 +198,7 @@ app.get("/api/rooms/:code/qr", async (req, res) => {
 
 io.on("connection", socket => {
   socket.on("create-room", (raw, reply = () => {}) => {
-    const decades = Array.isArray(raw?.decades) ? raw.decades.filter(d => DECADES.includes(d)) : [];
-    const difficulty = ["easy", "normal", "hard"].includes(raw?.difficulty) ? raw.difficulty : "normal";
-    const settings = {
-      decades: decades.length ? decades : DECADES,
-      rounds: [5, 10, 15].includes(Number(raw?.rounds)) ? Number(raw.rounds) : 10,
-      seconds: { easy: 45, normal: 30, hard: 20 }[difficulty],
-      difficulty,
-      mode: ["type", "year"].includes(raw?.mode) ? raw.mode : "mc"
-    };
+    const settings = buildSettings(raw);
     const roomCode = code();
     const room = { code: roomCode, hostId: socket.id, phase: "lobby", round: 0, settings,
       queue: [], players: new Map(), deadline: null, timer: null, createdAt: Date.now() };
@@ -208,6 +217,22 @@ io.on("connection", socket => {
     room.players.set(socket.id, { id: socket.id, name: cleanName(raw?.name), score: 0, answer: null });
     socket.join(roomCode);
     socket.data.roomCode = roomCode;
+    reply({ ok: true });
+    broadcast(room);
+  });
+
+  socket.on("restart-room", (raw, reply = () => {}) => {
+    const room = rooms.get(socket.data.roomCode);
+    if (!room || room.hostId !== socket.id) return reply({ ok: false, error: "Not the host." });
+    if (!["lobby", "finished"].includes(room.phase)) return reply({ ok: false, error: "Game is still in progress." });
+    clearTimeout(room.timer);
+    room.settings = buildSettings(raw);
+    room.phase = "lobby";
+    room.round = 0;
+    room.queue = [];
+    room.deadline = null;
+    room.timer = null;
+    room.players.forEach(player => { player.score = 0; player.answer = null; });
     reply({ ok: true });
     broadcast(room);
   });

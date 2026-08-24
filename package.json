@@ -10,6 +10,7 @@
     "db:build": "node scripts/build-database.js",
     "db:enrich-years": "node scripts/enrich-release-years.js",
     "db:import-additions": "node scripts/import-song-additions.js",
+    "db:import-difficulty-additions": "node scripts/import-difficulty-additions.js",
     "test": "node --test"
   },
   "engines": {

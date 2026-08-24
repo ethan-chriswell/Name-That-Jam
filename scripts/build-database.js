@@ -20,7 +20,7 @@ database.exec(`
     artist TEXT NOT NULL,
     youtube_video_id TEXT NOT NULL,
     release_year INTEGER CHECK(release_year BETWEEN 1900 AND 2100),
-    popularity TEXT NOT NULL CHECK(popularity IN ('popular', 'deep')),
+    difficulty TEXT NOT NULL CHECK(difficulty IN ('easy', 'normal', 'hard')),
     UNIQUE(decade, title, artist)
   );
   CREATE INDEX IF NOT EXISTS idx_songs_decade ON songs(decade);
@@ -29,14 +29,18 @@ database.exec(`
 const replaceCatalog = database.transaction(() => {
   database.prepare("DELETE FROM songs").run();
   const insert = database.prepare(`
-    INSERT INTO songs (decade, title, artist, youtube_video_id, release_year, popularity)
-    VALUES (@decade, @title, @artist, @videoId, @releaseYear, @popularity)
+    INSERT INTO songs (decade, title, artist, youtube_video_id, release_year, difficulty)
+    VALUES (@decade, @title, @artist, @videoId, @releaseYear, @difficulty)
   `);
   for (const [decade, entries] of Object.entries(songs)) {
-    for (const [title, artist, videoId, releaseYear, popularity = "popular"] of entries) {
+    for (const [title, artist, videoId, releaseYear, catalogTier = "easy"] of entries) {
+      const difficulty = { popular: "easy", deep: "hard" }[catalogTier] || catalogTier;
+      if (!["easy", "normal", "hard"].includes(difficulty)) {
+        throw new Error(`Invalid difficulty for ${artist} — ${title}: ${catalogTier}`);
+      }
       insert.run({ decade, title, artist, videoId,
         releaseYear: Number.isInteger(releaseYear) ? releaseYear : null,
-        popularity });
+        difficulty });
     }
   }
 });

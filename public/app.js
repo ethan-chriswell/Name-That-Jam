@@ -9,7 +9,12 @@
   function toast(message){$("toast").textContent=message;$("toast").style.display="block";setTimeout(()=>$("toast").style.display="none",3500)}
   decades.forEach(decade=>{const b=document.createElement("button");b.className="decade on";b.textContent=decade;b.onclick=()=>{selected.has(decade)?selected.delete(decade):selected.add(decade);b.classList.toggle("on")};$("decades").appendChild(b)});
   $("show-setup").onclick=()=>{document.body.classList.add("is-host");screen("setup")};
-  $("create-room").onclick=()=>socket.emit("create-room",{decades:[...selected],rounds:+$("rounds").value,difficulty:$("difficulty").value,mode:$("answer-mode").value},result=>{if(!result.ok)return toast(result.error);history.replaceState(null,"",`/?host=${result.code}`)});
+  $("play-again").onclick=()=>{$("create-room").textContent="Save & return to lobby";screen("setup")};
+  $("create-room").onclick=()=>{
+    const payload={decades:[...selected],rounds:+$("rounds").value,difficulty:$("difficulty").value,mode:$("answer-mode").value};
+    const restarting=Boolean(state?.isHost&&state?.code);
+    socket.emit(restarting?"restart-room":"create-room",payload,result=>{if(!result.ok)return toast(result.error);if(!restarting)history.replaceState(null,"",`/?host=${result.code}`)});
+  };
   $("join-form").onsubmit=e=>{e.preventDefault();join($("room-code").value,$("player-name").value)};
   function join(code,name){socket.emit("join-room",{code,name},result=>{if(!result.ok)toast(result.error);else history.replaceState(null,"",`/?room=${code}`)})}
   $("start-game").onclick=()=>socket.emit("start-game");
@@ -27,9 +32,9 @@
   function render(s){state=s;
     document.body.classList.toggle("is-host",!!s.isHost);
     clearInterval(timerHandle);
-    if(s.phase==="lobby"){screen("lobby");$("room-code-display").textContent=s.code;$("join-address").textContent=location.host;$("qr").src=`/api/rooms/${s.code}/qr`;$("player-count").textContent=s.players.length;$("lobby-players").innerHTML=s.players.map(p=>`<span class="player">${escapeHtml(p.name)}</span>`).join("");$("start-game").disabled=!s.players.length;$("start-game").hidden=!s.isHost;$("start-note").hidden=s.isHost&&s.players.length>0;return}
+    if(s.phase==="lobby"){screen("lobby");lastPlaybackState="";playbackRoundAck=0;typedRound=0;yearRound=0;$("room-code-display").textContent=s.code;$("join-address").textContent=location.host;$("qr").src=`/api/rooms/${s.code}/qr`;$("player-count").textContent=s.players.length;$("lobby-players").innerHTML=s.players.map(p=>`<span class="player">${escapeHtml(p.name)}</span>`).join("");$("start-game").disabled=!s.players.length;$("start-game").hidden=!s.isHost;$("start-note").hidden=s.isHost&&s.players.length>0;return}
     syncPlayback(s);
-    if(s.phase==="finished"){screen("finished");list("final-leaderboard",s.players);return}
+    if(s.phase==="finished"){screen("finished");list("final-leaderboard",s.players);$("play-again").hidden=!s.isHost;$("waiting-note").hidden=s.isHost;return}
     screen("game");$("round-label").textContent=`ROUND ${s.round} / ${s.totalRounds}`;$("decade-label").textContent=s.decade;$("host-stage").hidden=!s.isHost||!["loading","question"].includes(s.phase);$("countdown-panel").hidden=s.phase!=="countdown";$("loading-panel").hidden=s.phase!=="loading"||s.isHost;$("question").hidden=s.phase!=="question"||s.isHost;$("reveal-panel").hidden=s.phase!=="reveal";$("reveal").hidden=!s.isHost||s.phase!=="question";
     const answeredCount=s.players.filter(p=>p.answered).length,responsePercent=s.players.length?answeredCount/s.players.length*100:0;$("response-fill").style.width=`${responsePercent}%`;$("host-response-count").textContent=`${answeredCount} of ${s.players.length} players answered`;$('host-record').classList.toggle("playing",s.phase==="question");
     const tick=()=>{const remaining=s.deadline?Math.max(0,Math.ceil((s.deadline-Date.now())/1000)):0;$("timer").textContent=s.deadline?`${remaining}s`:"";if(s.phase==="countdown")$("countdown-number").textContent=remaining;if(s.phase==="reveal")$("next-countdown").textContent=s.round===s.totalRounds?`Final scores in ${remaining}…`:`Next round in ${remaining}…`};tick();if(s.deadline)timerHandle=setInterval(tick,250);

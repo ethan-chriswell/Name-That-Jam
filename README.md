@@ -42,9 +42,11 @@ The song catalog lives in SQLite at `data/songs.db`. To edit it reproducibly, up
 
 Release-year mode uses only catalog entries with a verified `release_year`. Run `npm run db:enrich-years` to query MusicBrainz for missing first-release years, review the resulting JSON changes, then run `npm run db:build`.
 
-Each catalog entry may use `"deep"` as its fifth JSON value; entries without it default to `"popular"`. Easy games use popular tracks, Normal games target a 30% deep-cut mix, and Hard games target 70% deep cuts. Difficulty also sets the round timer to 30, 20, or 10 seconds respectively.
+The fifth value in each catalog entry is its `"easy"`, `"normal"`, or `"hard"` song tier. A game fills its queue from the selected tier first, then falls back to neighboring tiers only when there are not enough songs for the requested decades and round count. Legacy `"popular"` and `"deep"` values are still accepted by the database builder and map to Easy and Hard. Difficulty also sets the round timer to 45, 30, or 20 seconds respectively.
 
 Large curated batches can be staged in `data/song-additions.json` and imported with `npm run db:import-additions`. The importer resolves YouTube IDs, rejects duplicates, checkpoints each track, and is safe to resume.
+
+Difficulty-balanced batches use `data/difficulty-song-additions.json` and can be imported with `npm run db:import-difficulty-additions`. Each decade must contain exactly 10 songs in each difficulty tier, with a unique prevalidated YouTube ID for every track.
 
 For phones to join, they must be able to reach the address shown in the browser. On a home network, open the game on the host using the computer's LAN IP (for example `http://192.168.1.20:8080`), not `localhost`. For internet play, deploy behind HTTPS with a public hostname. Run a single container replica unless room storage is moved to Redis.
 

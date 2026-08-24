@@ -44,7 +44,7 @@
       <aside class="panel leaderboard"><p class="eyebrow">Leaderboard</p><ol id="leaderboard"></ol></aside>
     </section>
 
-    <section id="finished" class="screen"><div class="panel finish"><p class="eyebrow">Final scores</p><h2>That’s a wrap.</h2><ol id="final-leaderboard"></ol><button onclick="location.href='/'" class="primary">New game</button></div></section>
+    <section id="finished" class="screen"><div class="panel finish"><p class="eyebrow">Final scores</p><h2>That’s a wrap.</h2><ol id="final-leaderboard"></ol><button id="play-again" class="primary" hidden>Play again</button><p id="waiting-note" class="muted" hidden>Waiting for the host to start a new game…</p><button onclick="location.href='/'" class="secondary">Exit to home</button></div></section>
     <div id="toast" role="alert"></div>
   </main>
   <script src="/socket.io/socket.io.js"></script>
