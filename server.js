@@ -87,7 +87,8 @@ function publicState(room, viewerId) {
       id, name, score, answered: Boolean(answer),
       roundPoints: reveal ? answer?.points || 0 : null,
       roundCorrect: reveal ? Boolean(answer?.correct) : null,
-      roundArtistBonus: reveal ? Boolean(answer?.artistBonus) : null
+      roundArtistBonus: reveal ? Boolean(answer?.artistBonus) : null,
+      roundYearBonus: reveal ? Boolean(answer?.yearBonus) : null
     })).sort((a, b) => b.score - a.score || a.name.localeCompare(b.name)),
     settings: room.settings
   };
@@ -185,7 +186,7 @@ io.on("connection", socket => {
     const settings = {
       decades: decades.length ? decades : DECADES,
       rounds: [5, 10, 15].includes(Number(raw?.rounds)) ? Number(raw.rounds) : 10,
-      seconds: { easy: 30, normal: 20, hard: 10 }[difficulty],
+      seconds: { easy: 45, normal: 30, hard: 20 }[difficulty],
       difficulty,
       mode: ["type", "year"].includes(raw?.mode) ? raw.mode : "mc"
     };
@@ -226,13 +227,16 @@ io.on("connection", socket => {
     if (!room || !player || !song || room.phase !== "question" || player.answer) return;
     const millisecondsLeft = Math.max(0, room.deadline - Date.now());
     const speedRatio = Math.min(1, millisecondsLeft / (room.settings.seconds * 1000));
-    let answer, correct, artistBonus = false;
+    let answer, correct, artistBonus = false, yearBonus = false;
     if (room.settings.mode === "year") {
-      const year = Number(value?.year);
+      const title = String(value?.title || "").trim();
       const artist = String(value?.artist || "").trim();
-      if (!Number.isInteger(year) || year < 1900 || year > 2100 || artist.length > 100) return;
-      answer = { year, artist };
-      correct = year === song.releaseYear;
+      const yearGuess = Number(value?.year);
+      const hasYear = Number.isInteger(yearGuess) && yearGuess >= 1900 && yearGuess <= 2100;
+      if (!title || title.length > 100 || artist.length > 100) return;
+      answer = { title, year: hasYear ? yearGuess : null, artist };
+      correct = textMatches(title, song.title);
+      yearBonus = hasYear && yearGuess === song.releaseYear;
       artistBonus = Boolean(artist) && textMatches(artist, song.artist);
     } else {
       answer = String(value);
@@ -242,8 +246,8 @@ io.on("connection", socket => {
         ? typedAnswerMatches(answer, song)
         : answer === `${song.title} — ${song.artist}`;
     }
-    const points = (correct ? Math.round(500 + 500 * speedRatio) : 0) + (artistBonus ? 250 : 0);
-    player.answer = { value: answer, correct, artistBonus, points, submittedAt: Date.now(), scored: false };
+    const points = (correct ? Math.round(500 + 500 * speedRatio) : 0) + (yearBonus ? 250 : 0) + (artistBonus ? 250 : 0);
+    player.answer = { value: answer, correct, artistBonus, yearBonus, points, submittedAt: Date.now(), scored: false };
     broadcast(room);
   });
 
