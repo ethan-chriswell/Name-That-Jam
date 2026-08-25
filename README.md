@@ -1,4 +1,4 @@
-# Decade Dial
+# Name That Jam
 
 A live multiplayer music trivia game. One person hosts on a shared screen, players scan the room QR code with their phones, and answers and scores update in real time.
 
@@ -7,7 +7,7 @@ A live multiplayer music trivia game. One person hosts on a shared screen, playe
 Pull the published image (built automatically by GitHub Actions on every push to `main`):
 
 ```bash
-docker run -d --name decade-dial -p 8080:8080 ghcr.io/ethan-chriswell/music-game:latest
+docker run -d --name name-that-jam -p 8080:8080 ghcr.io/ethan-chriswell/music-game:latest
 ```
 
 Then open http://localhost:8080
@@ -23,8 +23,8 @@ This builds the image locally from the `Dockerfile`. To use the published image 
 ## Build locally
 
 ```bash
-docker build -t decade-dial .
-docker run -d -p 8080:8080 decade-dial
+docker build -t name-that-jam .
+docker run -d -p 8080:8080 name-that-jam
 ```
 
 ## Run without Docker

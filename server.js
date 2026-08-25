@@ -314,6 +314,6 @@ setInterval(() => {
   rooms.forEach((room, key) => { if (room.createdAt < cutoff) rooms.delete(key); });
 }, 60 * 60 * 1000).unref();
 
-server.listen(PORT, "0.0.0.0", () => console.log(`Decade Dial listening on ${PORT}`));
+server.listen(PORT, "0.0.0.0", () => console.log(`Name That Jam listening on ${PORT}`));
 
 module.exports = { server, makeQueue, cleanName };

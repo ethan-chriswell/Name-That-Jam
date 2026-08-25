@@ -25,7 +25,7 @@ async function enrichBatch(batch) {
   url.searchParams.set("limit", "100");
   let response;
   for (let attempt = 1; attempt <= 5; attempt++) {
-    response = await fetch(url, { headers: { "User-Agent": "DecadeDial/2.0 (music trivia catalog)" } });
+    response = await fetch(url, { headers: { "User-Agent": "NameThatJam/2.0 (music trivia catalog)" } });
     if (response.ok) break;
     if (![429, 502, 503, 504].includes(response.status) || attempt === 5) {
       if (batch.length > 1) {

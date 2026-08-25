@@ -1,8 +1,8 @@
 services:
-  decade-dial:
+  name-that-jam:
     build: .
     image: ghcr.io/ethan-chriswell/music-game:latest
-    container_name: decade-dial
+    container_name: name-that-jam
     ports:
       - "8080:8080"
     restart: unless-stopped
