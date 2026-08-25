@@ -46,7 +46,7 @@ The fifth value in each catalog entry is its `"easy"`, `"normal"`, or `"hard"` s
 
 Large curated batches can be staged in `data/song-additions.json` and imported with `npm run db:import-additions`. The importer resolves YouTube IDs, rejects duplicates, checkpoints each track, and is safe to resume.
 
-Difficulty-balanced batches use `data/difficulty-song-additions.json` and can be imported with `npm run db:import-difficulty-additions`. Each decade must contain exactly 10 songs in each difficulty tier, with a unique prevalidated YouTube ID for every track.
+Difficulty-balanced batches use `data/difficulty-song-additions.json` and can be imported with `npm run db:import-difficulty-additions`. Each decade must contain exactly 10 songs in each difficulty tier, with a unique prevalidated YouTube ID for every track. The importer is idempotent and also accepts another batch path, for example `node scripts/import-difficulty-additions.js data/difficulty-song-additions-2000s-2020s.json`.
 
 For phones to join, they must be able to reach the address shown in the browser. On a home network, open the game on the host using the computer's LAN IP (for example `http://192.168.1.20:8080`), not `localhost`. For internet play, deploy behind HTTPS with a public hostname. Run a single container replica unless room storage is moved to Redis.
 
